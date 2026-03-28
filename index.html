@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seven Zea Chic Hotel Pattaya | Beachside Boutique Hotel in North Pattaya</title>
-<meta name="description" content="Seven Zea Chic Hotel — A modern boutique hotel just 150 meters from Pattaya Beach. Rooftop pool, free Wi-Fi, private parking, and coastal comfort in North Pattaya.">
+<title>Seven Zea Chic Hotel Pattaya — 150m to the Beach | Book Direct & Save</title>
+<meta name="description" content="Seven Zea Chic Hotel, North Pattaya. Just 150 meters from Pattaya Beach. Rooftop pool, free parking, free Wi-Fi. Book direct and save up to 10%.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -19,357 +19,383 @@
   --ocean-d:#3D7A8A;
   --sand:#C8A97E;
   --sand-l:#E0C89A;
+  --green:#2ECC71;
+  --red:#E74C3C;
   --text:#2C2825;
   --text-m:#6B6157;
   --text-l:#9E9087;
   --white:#FFFFFF;
   --border:rgba(92,158,173,.18);
-  --shadow:rgba(44,40,37,.08);
+  --shadow:rgba(44,40,37,.09);
 }
 html{scroll-behavior:smooth}
 body{background:var(--cream);color:var(--text);font-family:'DM Sans',sans-serif;font-weight:300;line-height:1.7;overflow-x:hidden}
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-track{background:var(--beige)}
-::-webkit-scrollbar-thumb{background:var(--ocean-l);border-radius:4px}
+::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--beige)}::-webkit-scrollbar-thumb{background:var(--ocean-l);border-radius:4px}
 h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:400;line-height:1.2}
 img{display:block;max-width:100%}
 a{color:inherit;text-decoration:none}
 
-/* ANIMATIONS */
-@keyframes fadeUp{from{opacity:0;transform:translateY(36px)}to{opacity:1;transform:translateY(0)}}
+/* ── KEYFRAMES ── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(32px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(10px)}}
-@keyframes shimmer{0%{background-position:-200% center}100%{background-position:200% center}}
-@keyframes wave{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(9px)}}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(1.5)}}
+@keyframes slideIn{from{transform:translateX(-120%);opacity:0}to{transform:translateX(0);opacity:1}}
+@keyframes slideOut{from{transform:translateX(0);opacity:1}to{transform:translateX(-120%);opacity:0}}
 
-.reveal{opacity:0;transform:translateY(44px);transition:all .9s cubic-bezier(.16,1,.3,1)}
+/* ── REVEAL ANIMATIONS ── */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .85s cubic-bezier(.16,1,.3,1),transform .85s cubic-bezier(.16,1,.3,1)}
 .reveal.on{opacity:1;transform:translateY(0)}
-.reveal-l{opacity:0;transform:translateX(-50px);transition:all .9s cubic-bezier(.16,1,.3,1)}
+.reveal-l{opacity:0;transform:translateX(-48px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
 .reveal-l.on{opacity:1;transform:translateX(0)}
-.reveal-r{opacity:0;transform:translateX(50px);transition:all .9s cubic-bezier(.16,1,.3,1)}
+.reveal-r{opacity:0;transform:translateX(48px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
 .reveal-r.on{opacity:1;transform:translateX(0)}
-.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}.d6{transition-delay:.6s}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
 
-/* UTILITIES */
+/* ── UTILITIES ── */
 .container{max-width:1200px;margin:0 auto;padding:0 48px}
-.section{padding:100px 0}
-.label{font-family:'DM Sans',sans-serif;font-size:.65rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--ocean);margin-bottom:.8rem}
-.sec-title{font-size:clamp(2rem,4vw,3.2rem);color:var(--text);margin-bottom:1.2rem}
-.divider{width:48px;height:2px;background:linear-gradient(90deg,var(--ocean),var(--ocean-l));margin-bottom:2rem;border-radius:2px}
-.divider.c{margin:0 auto 2rem}
-.text-center{text-align:center}
+.label{font-size:.63rem;font-weight:500;letter-spacing:.3em;text-transform:uppercase;color:var(--ocean);margin-bottom:.75rem;display:block}
+.sec-title{font-size:clamp(1.95rem,4vw,3.1rem);color:var(--text);margin-bottom:1.1rem}
+.divider{width:46px;height:2px;background:linear-gradient(90deg,var(--ocean),var(--ocean-l));margin-bottom:1.8rem;border-radius:2px}
+.divider.c{margin:0 auto 1.8rem}
 
-/* BUTTONS */
-.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 34px;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;border:none;transition:all .35s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden;text-decoration:none}
-.btn::before{content:'';position:absolute;inset:0;background:rgba(255,255,255,.15);transform:translateX(-110%);transition:transform .45s ease}
-.btn:hover::before{transform:translateX(0)}
-.btn-ocean{background:var(--ocean);color:#fff;border-radius:2px}
-.btn-ocean:hover{background:var(--ocean-d);transform:translateY(-3px);box-shadow:0 12px 32px rgba(91,158,173,.35)}
-.btn-outline{background:transparent;color:var(--ocean);border:1.5px solid var(--ocean);border-radius:2px}
-.btn-outline:hover{background:var(--ocean);color:#fff;transform:translateY(-3px);box-shadow:0 10px 28px rgba(91,158,173,.25)}
-.btn-sand{background:var(--sand);color:#fff;border-radius:2px}
-.btn-sand:hover{background:#b8905e;transform:translateY(-3px);box-shadow:0 10px 28px rgba(200,169,126,.35)}
-.btn-white{background:#fff;color:var(--ocean);border-radius:2px}
-.btn-white:hover{background:var(--cream);transform:translateY(-3px);box-shadow:0 10px 28px rgba(44,40,37,.15)}
-
-/* ── NAVBAR ── */
-#nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:22px 48px;display:flex;align-items:center;justify-content:space-between;transition:all .45s ease}
-#nav.scrolled{background:rgba(250,248,244,.96);backdrop-filter:blur(20px);padding:14px 48px;border-bottom:1px solid var(--border);box-shadow:0 4px 24px var(--shadow)}
-.nav-logo{display:flex;flex-direction:column;line-height:1;gap:3px}
-.nav-logo .n1{font-family:'Cormorant Garamond',serif;font-size:1.25rem;font-weight:500;letter-spacing:.06em;color:var(--text)}
-#nav:not(.scrolled) .n1{color:#fff}
-.nav-logo .n2{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ocean)}
-#nav:not(.scrolled) .n2{color:rgba(255,255,255,.7)}
-.nav-links{display:flex;gap:36px;list-style:none;align-items:center}
-.nav-links a{font-size:.7rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.85);transition:color .3s}
-#nav.scrolled .nav-links a{color:var(--text-m)}
-.nav-links a:hover{color:var(--ocean)}
-.nav-book{background:var(--ocean);color:#fff!important;padding:9px 22px;border-radius:1px;font-size:.65rem!important;letter-spacing:.14em;transition:all .3s!important}
-.nav-book:hover{background:var(--ocean-d)!important;transform:translateY(-1px)}
-.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
-.ham span{width:22px;height:1.5px;background:var(--white);transition:all .3s;display:block}
-#nav.scrolled .ham span{background:var(--text)}
-
-/* MOBILE MENU */
-#mob-menu{display:none;position:fixed;inset:0;background:rgba(250,248,244,.98);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:28px;backdrop-filter:blur(30px)}
-#mob-menu.open{display:flex}
-#mob-menu a{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--text);transition:color .3s}
-#mob-menu a:hover{color:var(--ocean)}
-.mob-close{position:absolute;top:24px;right:24px;background:none;border:none;color:var(--text);font-size:1.6rem;cursor:pointer;line-height:1;opacity:.6}
-.mob-close:hover{opacity:1}
-
-/* ── HERO ── */
-#hero{position:relative;height:100vh;min-height:700px;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-bg{position:absolute;inset:0;background:url('หน้าหลัก.webp') center/cover no-repeat;transform:scale(1.07);transition:transform 9s ease}
-.hero-bg.loaded{transform:scale(1)}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(170deg,rgba(20,60,80,.55) 0%,rgba(30,90,110,.35) 50%,rgba(10,30,40,.65) 100%)}
-.hero-ov::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,25,35,.75) 0%,transparent 50%)}
-.hero-cnt{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:860px;animation:fadeUp 1.2s cubic-bezier(.16,1,.3,1) .4s both}
-.hero-eyebrow{font-size:.62rem;letter-spacing:.38em;text-transform:uppercase;color:rgba(168,213,226,.9);margin-bottom:1.4rem;animation:fadeIn 1s .8s both}
-.hero-title{font-size:clamp(2.8rem,6.5vw,5.2rem);font-weight:300;line-height:1.1;letter-spacing:.01em;color:#fff;margin-bottom:1.4rem;font-style:italic}
-.hero-title em{font-style:normal;font-weight:500;color:var(--ocean-l)}
-.hero-sub{font-size:clamp(.9rem,2vw,1.1rem);font-weight:300;color:rgba(255,255,255,.78);margin-bottom:2.8rem;max-width:560px;margin-left:auto;margin-right:auto;line-height:1.7}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:.6;animation:fadeIn 1s 2s both}
-.hero-scroll span{font-size:.55rem;letter-spacing:.24em;text-transform:uppercase;color:#fff}
-.scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.7));animation:float 2.2s infinite}
-
-/* WAVE DIVIDER */
-.wave-wrap{line-height:0;overflow:hidden;margin-top:-2px}
-.wave-wrap svg{width:100%;height:64px}
+/* ── BUTTONS ── */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.13em;text-transform:uppercase;cursor:pointer;border:none;transition:all .32s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden;text-decoration:none;border-radius:2px}
+.btn::after{content:'';position:absolute;inset:0;background:rgba(255,255,255,.14);transform:translateX(-105%);transition:transform .4s ease}
+.btn:hover::after{transform:translateX(0)}
+.btn-ocean{background:var(--ocean);color:#fff}
+.btn-ocean:hover{background:var(--ocean-d);transform:translateY(-2px);box-shadow:0 10px 28px rgba(91,158,173,.32)}
+.btn-outline{background:transparent;color:var(--ocean);border:1.5px solid var(--ocean)}
+.btn-outline:hover{background:var(--ocean);color:#fff;transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--ocean-d)}
+.btn-white:hover{background:var(--cream);transform:translateY(-2px);box-shadow:0 10px 28px rgba(44,40,37,.14)}
 
 /* ── STICKY BOOKING BAR ── */
-#booking-bar{position:fixed;top:0;left:0;right:0;z-index:990;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 4px 24px rgba(44,40,37,.1);transform:translateY(-100%);transition:transform .45s cubic-bezier(.16,1,.3,1);pointer-events:none}
+#booking-bar{position:fixed;top:0;left:0;right:0;z-index:990;background:#fff;border-bottom:1px solid var(--border);box-shadow:0 4px 20px rgba(44,40,37,.1);transform:translateY(-100%);transition:transform .42s cubic-bezier(.16,1,.3,1);pointer-events:none}
 #booking-bar.visible{transform:translateY(0);pointer-events:all}
-.bar-inner{max-width:1200px;margin:0 auto;padding:12px 48px;display:flex;align-items:center;gap:12px}
-.bar-field{display:flex;flex-direction:column;gap:3px;flex:1}
-.bar-field label{font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-l);font-weight:500}
-.bar-field input,.bar-field select{border:1.5px solid var(--beige2);border-radius:2px;padding:8px 12px;font-family:'DM Sans',sans-serif;font-size:.85rem;color:var(--text);background:var(--cream);outline:none;transition:border-color .3s;width:100%}
-.bar-field input:focus,.bar-field select:focus{border-color:var(--ocean)}
-.bar-sep{width:1px;height:44px;background:var(--beige2);flex-shrink:0}
-.bar-btn{background:var(--ocean);color:#fff;border:none;padding:12px 28px;font-family:'DM Sans',sans-serif;font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-radius:2px;white-space:nowrap;transition:all .3s;flex-shrink:0}
-.bar-btn:hover{background:var(--ocean-d);transform:translateY(-1px);box-shadow:0 6px 20px rgba(91,158,173,.35)}
-@media(max-width:960px){.bar-inner{padding:10px 20px;gap:8px}.bar-sep{display:none}.bar-field{flex:1 1 30%}.bar-field label{display:none}}
-@media(max-width:640px){#booking-bar{display:none}}
+.bar-inner{max-width:1200px;margin:0 auto;padding:11px 48px;display:flex;align-items:center;gap:10px}
+.bar-field{display:flex;flex-direction:column;gap:2px;flex:1;min-width:0}
+.bar-field label{font-size:.56rem;letter-spacing:.2em;text-transform:uppercase;color:var(--text-l);font-weight:500}
+.bar-field input,.bar-field select{border:1.5px solid var(--beige2);border-radius:2px;padding:7px 11px;font-family:'DM Sans',sans-serif;font-size:.83rem;color:var(--text);background:var(--cream);outline:none;transition:border-color .25s;width:100%}
+.bar-field input:focus,.bar-field select:focus{border-color:var(--ocean);background:#fff}
+.bar-sep{width:1px;height:40px;background:var(--beige2);flex-shrink:0}
+.bar-cta{display:flex;flex-direction:column;align-items:flex-start;gap:1px;flex-shrink:0}
+.bar-btn{background:var(--ocean);color:#fff;border:none;padding:11px 24px;font-family:'DM Sans',sans-serif;font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-radius:2px;white-space:nowrap;transition:all .28s;display:block}
+.bar-btn:hover{background:var(--ocean-d);transform:translateY(-1px);box-shadow:0 5px 16px rgba(91,158,173,.32)}
+.bar-guarantee{font-size:.58rem;color:var(--text-l);letter-spacing:.04em;white-space:nowrap}
+@media(max-width:880px){.bar-inner{padding:10px 20px;gap:7px}.bar-sep{display:none}.bar-field{flex:1 1 28%}.bar-field label{display:none}.bar-guarantee{display:none}}
+@media(max-width:560px){#booking-bar{display:none}}
 
-/* ── SOCIAL PROOF ── */
-#reviews{background:var(--cream);padding:90px 0}
-.reviews-header{text-align:center;margin-bottom:56px}
-.rating-big{display:inline-flex;align-items:center;gap:16px;background:var(--white);padding:18px 32px;border-radius:60px;box-shadow:0 8px 32px var(--shadow);margin-bottom:32px}
-.rating-score{font-family:'Cormorant Garamond',serif;font-size:2.8rem;color:var(--ocean);font-weight:500;line-height:1}
-.rating-right{display:flex;flex-direction:column;gap:2px}
-.stars{color:#F5A623;font-size:1rem;letter-spacing:2px;display:block}
-.rating-count{font-size:.72rem;color:var(--text-l);margin-top:2px}
-.ota-badges{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:20px;flex-wrap:wrap}
-.ota-badge{display:flex;align-items:center;gap:8px;padding:10px 20px;border:1.5px solid var(--border);border-radius:40px;font-size:.72rem;color:var(--text-m);font-weight:500;transition:all .3s}
-.ota-badge:hover{border-color:var(--ocean);color:var(--ocean);transform:translateY(-2px)}
-.ota-badge svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.5}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.review-card{background:var(--white);padding:32px;border-radius:2px;box-shadow:0 4px 20px var(--shadow);transition:all .4s cubic-bezier(.16,1,.3,1);border-top:3px solid transparent}
-.review-card:hover{transform:translateY(-6px);box-shadow:0 16px 48px var(--shadow);border-top-color:var(--ocean)}
-.review-stars{color:#F5A623;font-size:.85rem;letter-spacing:1px;margin-bottom:14px}
-.review-text{font-size:.9rem;color:var(--text-m);line-height:1.75;margin-bottom:20px;font-style:italic}
-.review-author{display:flex;align-items:center;gap:12px}
-.review-avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--ocean-l),var(--ocean));display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:1rem;color:#fff;font-weight:500;flex-shrink:0}
-.review-name{font-weight:500;font-size:.85rem;color:var(--text)}
-.review-via{font-size:.7rem;color:var(--text-l)}
-@media(max-width:768px){.reviews-grid{grid-template-columns:1fr}}
+/* ── NAVBAR ── */
+#nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:20px 48px;display:flex;align-items:center;justify-content:space-between;transition:all .4s ease}
+#nav.scrolled{background:rgba(250,248,244,.96);backdrop-filter:blur(20px);padding:13px 48px;border-bottom:1px solid var(--border);box-shadow:0 3px 20px var(--shadow)}
+.nav-logo{display:flex;flex-direction:column;gap:2px}
+.nav-logo .n1{font-family:'Cormorant Garamond',serif;font-size:1.22rem;font-weight:500;letter-spacing:.05em;color:#fff;transition:color .3s}
+#nav.scrolled .nav-logo .n1{color:var(--text)}
+.nav-logo .n2{font-size:.53rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.65);transition:color .3s}
+#nav.scrolled .nav-logo .n2{color:var(--ocean)}
+.nav-links{display:flex;gap:32px;list-style:none;align-items:center}
+.nav-links a{font-size:.68rem;font-weight:400;letter-spacing:.11em;text-transform:uppercase;color:rgba(255,255,255,.82);transition:color .28s}
+#nav.scrolled .nav-links a{color:var(--text-m)}
+.nav-links a:hover{color:var(--ocean-l)}
+#nav.scrolled .nav-links a:hover{color:var(--ocean)}
+.nav-book{background:var(--ocean)!important;color:#fff!important;padding:9px 20px!important;border-radius:1px;transition:all .28s!important}
+.nav-book:hover{background:var(--ocean-d)!important;transform:translateY(-1px)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:4px}
+.ham span{width:22px;height:1.5px;background:#fff;transition:all .3s;display:block}
+#nav.scrolled .ham span{background:var(--text)}
 
-/* ── WHY BOOK DIRECT ── */
-#direct{background:var(--beige);padding:100px 0}
-.direct-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;margin-top:0}
-.direct-points{display:flex;flex-direction:column;gap:0;margin-top:40px}
-.direct-point{display:flex;gap:20px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--beige2);transition:all .3s}
-.direct-point:last-child{border-bottom:none}
-.direct-point:hover{padding-left:4px}
-.dp-icon{width:44px;height:44px;border-radius:50%;background:var(--ocean);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 6px 20px rgba(91,158,173,.25);transition:transform .3s}
-.direct-point:hover .dp-icon{transform:scale(1.1)}
-.dp-icon svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.dp-title{font-weight:500;font-size:.95rem;color:var(--text);margin-bottom:4px}
-.dp-desc{font-size:.82rem;color:var(--text-m);line-height:1.65}
-.direct-cta-box{background:var(--ocean);color:#fff;padding:52px 44px;border-radius:2px;text-align:center;position:relative;overflow:hidden}
-.direct-cta-box::before{content:'';position:absolute;top:-40%;right:-20%;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.07);pointer-events:none}
-.direct-cta-box h3{font-size:clamp(1.6rem,3vw,2.4rem);color:#fff;margin-bottom:14px}
-.direct-cta-box p{color:rgba(255,255,255,.8);font-size:.9rem;line-height:1.75;margin-bottom:32px}
-.direct-cta-box .btn-white{color:var(--ocean-d);font-weight:500;letter-spacing:.1em}
-.saving-pill{display:inline-block;background:rgba(255,255,255,.2);color:#fff;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;padding:6px 16px;border-radius:20px;margin-bottom:20px}
-@media(max-width:960px){.direct-grid{grid-template-columns:1fr}}
+/* ── MOBILE MENU ── */
+#mob-menu{display:none;position:fixed;inset:0;background:rgba(250,248,244,.97);z-index:999;flex-direction:column;align-items:center;justify-content:center;gap:24px;backdrop-filter:blur(28px)}
+#mob-menu.open{display:flex}
+#mob-menu a{font-family:'Cormorant Garamond',serif;font-size:2.1rem;color:var(--text);transition:color .28s}
+#mob-menu a:hover{color:var(--ocean)}
+.mob-close{position:absolute;top:22px;right:22px;background:none;border:none;color:var(--text);font-size:1.5rem;cursor:pointer;opacity:.55}
+.mob-close:hover{opacity:1}
+.mob-book-cta{margin-top:8px;font-family:'DM Sans',sans-serif!important;font-size:.75rem!important;background:var(--ocean);color:#fff!important;padding:13px 32px;border-radius:2px}
+
+/* ── HERO ── */
+#hero{position:relative;height:100vh;min-height:680px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url('หน้าหลัก.webp') center/cover no-repeat;transform:scale(1.06);transition:transform 9s ease}
+.hero-bg.loaded{transform:scale(1)}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(175deg,rgba(15,50,70,.6) 0%,rgba(20,70,90,.3) 45%,rgba(8,22,32,.7) 100%)}
+.hero-ov::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,20,30,.78) 0%,transparent 52%)}
+.hero-cnt{position:relative;z-index:2;text-align:center;padding:0 24px;max-width:840px;animation:fadeUp 1.1s cubic-bezier(.16,1,.3,1) .35s both}
+
+/* Hero top badge */
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(14px);padding:8px 20px;border-radius:40px;margin-bottom:1.3rem;animation:fadeIn .9s .75s both}
+.hero-badge .hb-stars{color:#FBBC04;font-size:.85rem;letter-spacing:1px}
+.hero-badge .hb-text{font-size:.7rem;color:rgba(255,255,255,.9);letter-spacing:.06em}
+.hero-badge .hb-sep{color:rgba(255,255,255,.35);font-size:.8rem}
+
+/* Hero headline */
+.hero-eyebrow{font-size:.6rem;letter-spacing:.36em;text-transform:uppercase;color:rgba(168,213,226,.88);margin-bottom:1.2rem;animation:fadeIn 1s .8s both}
+.hero-title{font-size:clamp(2.7rem,6.2vw,5rem);font-weight:300;line-height:1.09;color:#fff;margin-bottom:1.3rem;font-style:italic}
+.hero-title em{font-style:normal;font-weight:500;color:var(--ocean-l)}
+.hero-sub{font-size:clamp(.88rem,1.9vw,1.07rem);font-weight:300;color:rgba(255,255,255,.75);margin-bottom:2.5rem;max-width:540px;margin-left:auto;margin-right:auto;line-height:1.72}
+
+/* Hero CTAs */
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.btn-hero-primary{background:var(--ocean);color:#fff;padding:16px 38px;font-size:.76rem;border-radius:2px;font-weight:500;box-shadow:0 6px 24px rgba(91,158,173,.4)}
+.btn-hero-primary:hover{background:var(--ocean-d);transform:translateY(-3px);box-shadow:0 14px 36px rgba(91,158,173,.45)}
+.btn-hero-secondary{background:rgba(255,255,255,.13);color:#fff;border:1.5px solid rgba(255,255,255,.38);padding:16px 30px;font-size:.76rem;border-radius:2px;backdrop-filter:blur(10px)}
+.btn-hero-secondary:hover{background:rgba(255,255,255,.22);transform:translateY(-3px);border-color:rgba(255,255,255,.6)}
+.hero-guarantee{font-size:.7rem;color:rgba(255,255,255,.55);letter-spacing:.05em}
+.hero-guarantee span{color:rgba(255,255,255,.83)}
+
+/* Hero scroll */
+.hero-scroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:7px;opacity:.5;animation:fadeIn 1s 2.1s both}
+.hero-scroll span{font-size:.52rem;letter-spacing:.22em;text-transform:uppercase;color:#fff}
+.scroll-line{width:1px;height:38px;background:linear-gradient(to bottom,transparent,rgba(255,255,255,.7));animation:floatY 2.2s infinite}
+
+/* ── TRUST STRIP ── */
+#trust-strip{background:var(--white);border-bottom:1px solid var(--beige2)}
+.ts-inner{max-width:1200px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap}
+.ts-item{display:flex;align-items:center;gap:8px;padding:14px 24px;border-right:1px solid var(--beige2);font-size:.74rem;color:var(--text-m)}
+.ts-item:last-child{border-right:none}
+.ts-icon{width:16px;height:16px;stroke:var(--ocean);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.ts-item strong{color:var(--text);font-weight:500}
+@media(max-width:680px){.ts-inner{padding:0 16px}.ts-item{padding:10px 14px;font-size:.68rem}}
+
+/* ── WAVE ── */
+.wave-wrap{line-height:0;overflow:hidden;margin-top:-1px}
+.wave-wrap svg{width:100%;height:56px;display:block}
+
+/* ── REVIEWS ── */
+#reviews{background:var(--cream);padding:88px 0}
+.reviews-top{text-align:center;margin-bottom:52px}
+.rating-pill{display:inline-flex;align-items:center;gap:14px;background:var(--white);padding:16px 28px;border-radius:50px;box-shadow:0 6px 28px var(--shadow);margin-bottom:24px}
+.rating-num{font-family:'Cormorant Garamond',serif;font-size:2.6rem;color:var(--ocean);font-weight:500;line-height:1}
+.rating-detail .r-stars{color:#F5A623;font-size:.9rem;letter-spacing:2px;display:block}
+.rating-detail .r-sub{font-size:.68rem;color:var(--text-l);margin-top:3px}
+.ota-row{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:18px;flex-wrap:wrap}
+.ota-chip{display:flex;align-items:center;gap:7px;border:1.5px solid var(--border);border-radius:30px;padding:8px 18px;font-size:.7rem;color:var(--text-m);font-weight:500;transition:all .28s}
+.ota-chip:hover{border-color:var(--ocean);color:var(--ocean);transform:translateY(-2px)}
+.ota-chip svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.6}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.rc{background:var(--white);padding:30px;border-radius:2px;box-shadow:0 3px 16px var(--shadow);transition:all .38s cubic-bezier(.16,1,.3,1);border-top:3px solid transparent;position:relative}
+.rc:hover{transform:translateY(-5px);box-shadow:0 14px 44px var(--shadow);border-top-color:var(--ocean)}
+.rc-stars{color:#F5A623;font-size:.82rem;letter-spacing:1px;margin-bottom:12px}
+.rc-text{font-size:.88rem;color:var(--text-m);line-height:1.72;margin-bottom:18px;font-style:italic}
+.rc-author{display:flex;align-items:center;gap:10px}
+.rc-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:.95rem;color:#fff;font-weight:500;flex-shrink:0}
+.rc-name{font-weight:500;font-size:.83rem;color:var(--text)}
+.rc-meta{font-size:.67rem;color:var(--text-l);margin-top:1px}
+.rc-via{position:absolute;top:18px;right:18px;font-size:.6rem;color:var(--text-l);letter-spacing:.1em;text-transform:uppercase;opacity:.6}
+@media(max-width:720px){.reviews-grid{grid-template-columns:1fr}}
 
 /* ── ABOUT ── */
-#about{background:var(--white);padding:110px 0}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+#about{background:var(--white);padding:108px 0}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:76px;align-items:center}
 .about-img-wrap{position:relative}
 .about-img-main{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
-.about-img-float{position:absolute;bottom:-32px;right:-32px;width:52%;aspect-ratio:1;object-fit:cover;border:6px solid #fff;border-radius:2px;box-shadow:0 20px 60px var(--shadow)}
-.about-badge{position:absolute;top:32px;left:-28px;background:var(--ocean);color:#fff;padding:18px 22px;text-align:center;border-radius:2px;box-shadow:0 12px 40px rgba(91,158,173,.3)}
-.about-badge .num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;font-weight:500;line-height:1;display:block}
-.about-badge .sub{font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85;margin-top:4px}
-.about-text p{color:var(--text-m);margin-bottom:1.4rem;font-size:1rem;line-height:1.85}
-.about-text p:last-of-type{margin-bottom:0}
+.about-img-float{position:absolute;bottom:-28px;right:-28px;width:50%;aspect-ratio:1;object-fit:cover;border:5px solid #fff;border-radius:2px;box-shadow:0 16px 52px var(--shadow)}
+.about-badge{position:absolute;top:28px;left:-24px;background:var(--ocean);color:#fff;padding:16px 20px;text-align:center;border-radius:2px;box-shadow:0 10px 36px rgba(91,158,173,.28)}
+.about-badge .ab-num{font-family:'Cormorant Garamond',serif;font-size:2.2rem;font-weight:500;line-height:1;display:block}
+.about-badge .ab-sub{font-size:.55rem;letter-spacing:.16em;text-transform:uppercase;opacity:.82;margin-top:3px}
+.about-stats{display:flex;gap:28px;margin-top:34px}
+.stat-n{font-family:'Cormorant Garamond',serif;font-size:2.2rem;color:var(--ocean);line-height:1}
+.stat-l{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--text-l);margin-top:3px}
+.stat-sep{width:1px;background:var(--beige2)}
 
 /* ── FEATURES ── */
-#features{background:var(--beige);padding:100px 0}
-.features-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:60px}
-.feat-card{background:var(--white);padding:42px 28px;text-align:center;transition:all .4s cubic-bezier(.16,1,.3,1);cursor:default;border-radius:1px}
-.feat-card:hover{background:var(--ocean);transform:translateY(-8px);box-shadow:0 24px 60px rgba(91,158,173,.25)}
-.feat-icon{width:54px;height:54px;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;background:var(--beige);border-radius:50%;transition:all .4s}
-.feat-card:hover .feat-icon{background:rgba(255,255,255,.2)}
-.feat-icon svg{width:26px;height:26px;stroke:var(--ocean);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .4s}
-.feat-card:hover .feat-icon svg{stroke:#fff}
-.feat-title{font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:500;color:var(--text);margin-bottom:.5rem;transition:color .4s}
-.feat-card:hover .feat-title{color:#fff}
-.feat-desc{font-size:.8rem;color:var(--text-l);line-height:1.6;transition:color .4s}
-.feat-card:hover .feat-desc{color:rgba(255,255,255,.8)}
+#features{background:var(--beige);padding:96px 0}
+.features-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;margin-top:58px}
+.fc{background:var(--white);padding:38px 24px;text-align:center;transition:all .38s cubic-bezier(.16,1,.3,1);cursor:default}
+.fc:hover{background:var(--ocean);transform:translateY(-7px);box-shadow:0 20px 52px rgba(91,158,173,.22)}
+.fc-icon{width:50px;height:50px;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;background:var(--beige);border-radius:50%;transition:background .38s}
+.fc:hover .fc-icon{background:rgba(255,255,255,.18)}
+.fc-icon svg{width:24px;height:24px;stroke:var(--ocean);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:stroke .38s}
+.fc:hover .fc-icon svg{stroke:#fff}
+.fc-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:500;color:var(--text);margin-bottom:.4rem;transition:color .38s}
+.fc:hover .fc-title{color:#fff}
+.fc-desc{font-size:.78rem;color:var(--text-l);line-height:1.58;transition:color .38s}
+.fc:hover .fc-desc{color:rgba(255,255,255,.78)}
 
 /* ── ROOMS ── */
-#rooms{background:var(--white);padding:110px 0}
-.rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:60px}
-.room-card{background:var(--cream);overflow:hidden;border-radius:2px;transition:all .45s cubic-bezier(.16,1,.3,1)}
-.room-card:hover{transform:translateY(-10px);box-shadow:0 28px 64px var(--shadow)}
+#rooms{background:var(--white);padding:108px 0}
+.rooms-header{text-align:center;margin-bottom:58px}
+.live-avail{display:inline-flex;align-items:center;gap:6px;background:#EBF8F0;color:#1A7A4A;font-size:.67rem;font-weight:500;padding:5px 14px;border-radius:20px;margin-top:10px}
+.live-avail .ld{width:5px;height:5px;background:var(--green);border-radius:50%;animation:pulse 1.7s infinite}
+.rooms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.room-card{background:var(--cream);overflow:hidden;border-radius:2px;transition:all .4s cubic-bezier(.16,1,.3,1);position:relative}
+.room-card:hover{transform:translateY(-9px);box-shadow:0 24px 56px var(--shadow)}
+.room-card.featured{box-shadow:0 0 0 2px var(--ocean),0 6px 28px var(--shadow)}
 .room-img{aspect-ratio:4/3;overflow:hidden;position:relative}
-.room-img img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
-.room-card:hover .room-img img{transform:scale(1.07)}
-.room-tag{position:absolute;top:18px;left:18px;background:var(--ocean);color:#fff;font-size:.58rem;letter-spacing:.2em;text-transform:uppercase;padding:5px 12px;border-radius:1px}
-.room-body{padding:28px}
-.room-name{font-size:1.35rem;color:var(--text);margin-bottom:10px}
-.room-amenities{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px}
-.amen{font-size:.7rem;color:var(--text-m);background:var(--beige);padding:4px 10px;border-radius:20px;display:flex;align-items:center;gap:5px}
-.amen svg{width:12px;height:12px;stroke:var(--ocean);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-.room-footer{display:flex;align-items:center;justify-content:space-between;padding-top:18px;border-top:1px solid var(--beige2)}
-.room-price{font-family:'Cormorant Garamond',serif;font-size:1.5rem;color:var(--ocean);font-weight:500}
-.room-price span{font-family:'DM Sans',sans-serif;font-size:.7rem;color:var(--text-l);font-weight:300;margin-left:3px}
+.room-img img{width:100%;height:100%;object-fit:cover;transition:transform .65s cubic-bezier(.16,1,.3,1)}
+.room-card:hover .room-img img{transform:scale(1.06)}
+.room-tag{position:absolute;top:16px;left:16px;color:#fff;font-size:.57rem;letter-spacing:.18em;text-transform:uppercase;padding:5px 11px;border-radius:1px;font-weight:500}
+.room-body{padding:26px}
+.urgency-row{display:flex;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap}
+.urgency{display:inline-flex;align-items:center;gap:5px;background:#FFF2F0;color:#C0392B;font-size:.63rem;font-weight:500;padding:4px 11px;border-radius:20px}
+.ud{width:5px;height:5px;background:var(--red);border-radius:50%;animation:pulse 1.5s infinite;flex-shrink:0}
+.booked-tag{font-size:.67rem;color:var(--text-l);display:flex;align-items:center;gap:4px}
+.booked-tag svg{width:11px;height:11px;stroke:var(--sand);fill:none;stroke-width:2;stroke-linecap:round}
+.room-name{font-size:1.3rem;color:var(--text);margin-bottom:12px}
+.amenities{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.amen{font-size:.68rem;color:var(--text-m);background:var(--beige);padding:4px 10px;border-radius:20px;display:flex;align-items:center;gap:4px}
+.amen svg{width:11px;height:11px;stroke:var(--ocean);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.room-footer{border-top:1px solid var(--beige2);padding-top:16px}
+.price-row{display:flex;align-items:baseline;gap:6px;margin-bottom:10px}
+.room-price{font-family:'Cormorant Garamond',serif;font-size:1.45rem;color:var(--ocean);font-weight:500}
+.room-price-unit{font-size:.68rem;color:var(--text-l)}
+.room-cta-wrap{display:flex;flex-direction:column;gap:5px}
+.btn-book-direct{background:var(--ocean);color:#fff;border:none;padding:12px 20px;font-family:'DM Sans',sans-serif;font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;border-radius:2px;display:flex;align-items:center;justify-content:center;gap:7px;transition:all .3s cubic-bezier(.16,1,.3,1);text-decoration:none;width:100%}
+.btn-book-direct:hover{background:var(--ocean-d);transform:translateY(-2px);box-shadow:0 8px 22px rgba(91,158,173,.32)}
+.btn-book-direct svg{width:12px;height:12px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
+.btn-book-direct:hover svg{transform:translateX(3px)}
+.room-sub{font-size:.63rem;color:var(--text-l);text-align:center;letter-spacing:.04em}
+.room-sub span{color:var(--ocean)}
+
+/* ── WHY BOOK DIRECT ── */
+#direct{background:var(--beige);padding:96px 0}
+.direct-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+.direct-points{display:flex;flex-direction:column;margin-top:36px}
+.dp{display:flex;gap:18px;align-items:flex-start;padding:20px 0;border-bottom:1px solid var(--beige2);transition:padding-left .28s}
+.dp:first-child{padding-top:0}
+.dp:last-child{border-bottom:none}
+.dp:hover{padding-left:5px}
+.dp-ico{width:42px;height:42px;border-radius:50%;background:var(--ocean);display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 5px 18px rgba(91,158,173,.22);transition:transform .28s}
+.dp:hover .dp-ico{transform:scale(1.1)}
+.dp-ico svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.dp-title{font-weight:500;font-size:.92rem;color:var(--text);margin-bottom:3px}
+.dp-desc{font-size:.8rem;color:var(--text-m);line-height:1.62}
+.direct-box{background:var(--ocean);padding:48px 40px;border-radius:2px;text-align:center;position:relative;overflow:hidden}
+.direct-box::before{content:'';position:absolute;top:-30%;right:-15%;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.07);pointer-events:none}
+.direct-box::after{content:'';position:absolute;bottom:-20%;left:-10%;width:180px;height:180px;border-radius:50%;background:rgba(255,255,255,.04);pointer-events:none}
+.db-pill{display:inline-block;background:rgba(255,255,255,.18);color:#fff;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;padding:5px 14px;border-radius:20px;margin-bottom:18px}
+.direct-box h3{font-size:clamp(1.5rem,2.8vw,2.2rem);color:#fff;margin-bottom:12px}
+.direct-box p{color:rgba(255,255,255,.78);font-size:.88rem;line-height:1.72;margin-bottom:28px}
+.direct-box .btn-white{color:var(--ocean-d);font-weight:500}
+.db-sub{font-size:.67rem;color:rgba(255,255,255,.45);margin-top:14px}
 
 /* ── LOCATION ── */
-#location{background:var(--beige);padding:110px 0}
-.location-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:70px;align-items:start}
-.location-map{border-radius:2px;overflow:hidden;box-shadow:0 20px 60px var(--shadow);aspect-ratio:4/3;background:var(--beige2)}
-.location-map iframe{width:100%;height:100%;border:0;display:block;filter:saturate(1.1)}
-.nearby-list{display:flex;flex-direction:column;gap:0;margin-top:32px}
-.nearby-item{display:flex;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid var(--beige2);transition:all .3s}
+#location{background:var(--white);padding:108px 0}
+.location-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:start}
+.location-map{border-radius:2px;overflow:hidden;box-shadow:0 16px 52px var(--shadow);aspect-ratio:4/3}
+.location-map iframe{width:100%;height:100%;border:0;display:block}
+.nearby-list{margin-top:28px}
+.nearby-item{display:flex;align-items:center;gap:14px;padding:16px 0;border-bottom:1px solid var(--beige2);transition:padding-left .28s}
 .nearby-item:last-child{border-bottom:none}
-.nearby-item:hover{padding-left:6px}
-.nearby-dot{width:10px;height:10px;border-radius:50%;background:var(--ocean);flex-shrink:0}
-.nearby-info .place{font-weight:500;font-size:.9rem;color:var(--text)}
-.nearby-info .dist{font-size:.78rem;color:var(--ocean);margin-top:2px}
+.nearby-item:hover{padding-left:5px}
+.nd{width:9px;height:9px;border-radius:50%;flex-shrink:0}
+.ni-place{font-weight:500;font-size:.88rem;color:var(--text)}
+.ni-dist{font-size:.75rem;color:var(--ocean);margin-top:1px}
 
 /* ── GALLERY ── */
-#gallery{background:var(--white);padding:110px 0}
-.gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);grid-template-rows:auto;gap:12px;margin-top:60px}
-.g-item{overflow:hidden;border-radius:2px;background:var(--beige2)}
-.g-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1)}
-.g-item:hover img{transform:scale(1.06)}
-.g1{grid-column:span 5;grid-row:span 2;aspect-ratio:auto}
-.g2{grid-column:span 4;aspect-ratio:4/3}
-.g3{grid-column:span 3;aspect-ratio:4/3}
-.g4{grid-column:span 4;aspect-ratio:4/3}
-.g5{grid-column:span 3;aspect-ratio:4/3}
-.g6{grid-column:span 5;aspect-ratio:4/3}
-.g-item.tall{aspect-ratio:3/4}
-.g1{aspect-ratio:auto}
+#gallery{background:var(--beige);padding:108px 0}
+.gallery-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:10px;margin-top:56px}
+.gi{overflow:hidden;border-radius:2px;background:var(--beige2)}
+.gi img{width:100%;height:100%;object-fit:cover;transition:transform .65s cubic-bezier(.16,1,.3,1);display:block}
+.gi:hover img{transform:scale(1.055)}
+.gi.g1{grid-column:span 5;grid-row:span 2;min-height:380px}
+.gi.g2{grid-column:span 4;aspect-ratio:4/3}
+.gi.g3{grid-column:span 3;aspect-ratio:4/3}
+.gi.g4{grid-column:span 4;aspect-ratio:4/3}
+.gi.g5{grid-column:span 3;aspect-ratio:4/3}
+.gi.g6{grid-column:span 5;aspect-ratio:4/3}
 
-/* ── BOOKING ── */
-#booking{background:linear-gradient(145deg,var(--ocean-d) 0%,var(--ocean) 50%,#4A8E9C 100%);padding:110px 0;position:relative;overflow:hidden}
-#booking::before{content:'';position:absolute;top:-60%;left:-20%;width:140%;height:200%;background:radial-gradient(ellipse at 60% 50%,rgba(255,255,255,.08) 0%,transparent 70%);pointer-events:none}
-.booking-inner{text-align:center;position:relative;z-index:1;max-width:700px;margin:0 auto}
-.booking-inner .label{color:rgba(255,255,255,.65)}
-.booking-inner .sec-title{color:#fff}
-.booking-inner .divider{background:linear-gradient(90deg,rgba(255,255,255,.3),rgba(255,255,255,.8),rgba(255,255,255,.3));margin:0 auto 1.8rem}
-.booking-sub{color:rgba(255,255,255,.78);margin-bottom:3rem;font-size:1rem;line-height:1.75}
-.booking-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+/* ── BOOKING CTA ── */
+#booking{background:linear-gradient(148deg,#2C7388 0%,var(--ocean) 55%,#4A9AAC 100%);padding:108px 0;position:relative;overflow:hidden}
+#booking::before{content:'';position:absolute;inset:0;background:url('หน้าหลัก.webp') center/cover no-repeat;opacity:.1}
+#booking::after{content:'';position:absolute;top:-50%;left:-10%;width:130%;height:200%;background:radial-gradient(ellipse at 60% 50%,rgba(255,255,255,.07) 0%,transparent 68%);pointer-events:none}
+.booking-wrap{text-align:center;position:relative;z-index:1;max-width:680px;margin:0 auto}
+.booking-urgency{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:7px 18px;border-radius:30px;font-size:.68rem;color:rgba(255,255,255,.88);margin-bottom:1.5rem;letter-spacing:.05em}
+.booking-urgency .bu-dot{width:6px;height:6px;background:#6EE7A0;border-radius:50%;animation:pulse 1.6s infinite;flex-shrink:0}
+.booking-sub{color:rgba(255,255,255,.75);margin-bottom:.8rem;font-size:.97rem;line-height:1.72}
+.booking-note{font-size:.72rem;color:rgba(255,255,255,.45);margin-top:1.6rem;letter-spacing:.05em}
+.booking-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:.5rem}
 .btn-agoda{background:#fff;color:var(--ocean-d);font-weight:500}
-.btn-agoda:hover{background:var(--cream);transform:translateY(-3px);box-shadow:0 14px 40px rgba(0,0,0,.2)}
-.btn-booking{background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.45);backdrop-filter:blur(10px)}
-.btn-booking:hover{background:rgba(255,255,255,.25);transform:translateY(-3px);border-color:rgba(255,255,255,.7)}
+.btn-agoda:hover{background:var(--cream);transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.18)}
+.btn-bdc{background:rgba(255,255,255,.13);color:#fff;border:1.5px solid rgba(255,255,255,.38);backdrop-filter:blur(10px)}
+.btn-bdc:hover{background:rgba(255,255,255,.22);transform:translateY(-3px);border-color:rgba(255,255,255,.65)}
+.viewers-line{display:inline-flex;align-items:center;gap:7px;font-size:.7rem;color:rgba(255,255,255,.6);margin-top:1.4rem}
+.viewers-line .vd{width:6px;height:6px;background:#6EE7A0;border-radius:50%;animation:pulse 1.8s infinite;flex-shrink:0}
 
 /* ── CONTACT ── */
-#contact{background:var(--beige);padding:110px 0}
-.contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:70px;align-items:start}
-.contact-info{display:flex;flex-direction:column;gap:32px;margin-top:40px}
-.contact-item{display:flex;gap:20px;align-items:flex-start}
-.contact-icon{width:46px;height:46px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 16px var(--shadow)}
-.contact-icon svg{width:20px;height:20px;stroke:var(--ocean);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
-.contact-label{font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ocean);margin-bottom:4px}
-.contact-val{color:var(--text);font-size:.95rem;line-height:1.6}
-.contact-form{background:var(--white);padding:48px;border-radius:2px;box-shadow:0 12px 48px var(--shadow)}
-.form-title{font-size:1.5rem;color:var(--text);margin-bottom:28px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
-.form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
-.form-group label{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-m)}
-.form-group input,.form-group textarea,.form-group select{padding:12px 16px;background:var(--beige);border:1.5px solid transparent;border-radius:1px;font-family:'DM Sans',sans-serif;font-size:.9rem;color:var(--text);transition:all .3s;outline:none;width:100%}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--ocean);background:var(--white)}
-.form-group textarea{resize:vertical;min-height:100px}
-.form-group select{appearance:none;cursor:pointer}
+#contact{background:var(--beige);padding:108px 0}
+.contact-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:64px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:28px;margin-top:36px}
+.ci{display:flex;gap:16px;align-items:flex-start}
+.ci-icon{width:44px;height:44px;background:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 3px 14px var(--shadow)}
+.ci-icon svg{width:19px;height:19px;stroke:var(--ocean);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.ci-lbl{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ocean);margin-bottom:3px}
+.ci-val{color:var(--text);font-size:.92rem;line-height:1.55}
+.cf{background:var(--white);padding:40px;border-radius:2px;box-shadow:0 10px 40px var(--shadow)}
+.cf-title{font-size:1.4rem;color:var(--text);margin-bottom:6px}
+.cf-sub{font-size:.8rem;color:var(--text-m);margin-bottom:24px;line-height:1.6}
+.fg{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
+.fg label{font-size:.67rem;letter-spacing:.11em;text-transform:uppercase;color:var(--text-m)}
+.fg input,.fg textarea{padding:11px 14px;background:var(--beige);border:1.5px solid transparent;border-radius:1px;font-family:'DM Sans',sans-serif;font-size:.88rem;color:var(--text);transition:all .28s;outline:none;width:100%}
+.fg input:focus,.fg textarea:focus{border-color:var(--ocean);background:#fff}
+.fg textarea{resize:vertical;min-height:90px}
+.cf-or{text-align:center;padding:16px 0 0;border-top:1px solid var(--beige2);margin-top:4px}
+.cf-or p{font-size:.7rem;color:var(--text-l);margin-bottom:12px;letter-spacing:.05em}
+.cf-or-btns{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}
 
 /* ── FOOTER ── */
-footer{background:var(--text);padding:60px 0 30px;color:rgba(250,248,244,.65)}
-.footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:60px;margin-bottom:50px}
-.footer-brand .n1{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--cream);letter-spacing:.06em;margin-bottom:4px}
-.footer-brand .n2{font-size:.55rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ocean-l);margin-bottom:16px}
-.footer-brand p{font-size:.82rem;line-height:1.75;max-width:280px}
-.footer-col h4{font-family:'DM Sans',sans-serif;font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:var(--ocean-l);margin-bottom:18px}
-.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.footer-col ul a{font-size:.82rem;transition:color .3s}
-.footer-col ul a:hover{color:var(--cream)}
-.footer-bottom{border-top:1px solid rgba(250,248,244,.1);padding-top:28px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer-bottom p{font-size:.72rem}
+footer{background:var(--text);padding:56px 0 28px;color:rgba(250,248,244,.6)}
+.ft{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:52px;margin-bottom:44px}
+.fb .fn1{font-family:'Cormorant Garamond',serif;font-size:1.22rem;color:var(--cream);letter-spacing:.05em;margin-bottom:3px}
+.fb .fn2{font-size:.52rem;letter-spacing:.28em;text-transform:uppercase;color:var(--ocean-l);margin-bottom:14px}
+.fb p{font-size:.8rem;line-height:1.72;max-width:270px}
+.fc2 h4{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ocean-l);margin-bottom:16px}
+.fc2 ul{list-style:none;display:flex;flex-direction:column;gap:9px}
+.fc2 ul a{font-size:.8rem;transition:color .28s}
+.fc2 ul a:hover{color:var(--cream)}
+.footer-bottom{border-top:1px solid rgba(250,248,244,.09);padding-top:24px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.footer-bottom p{font-size:.7rem}
+
+/* ── ACTIVITY TOAST ── */
+#act-toast{position:fixed;bottom:24px;left:24px;z-index:9999;background:#fff;border-radius:3px;box-shadow:0 8px 28px rgba(44,40,37,.16);padding:13px 16px;display:flex;align-items:flex-start;gap:11px;max-width:290px;transform:translateX(-130%);transition:transform .48s cubic-bezier(.16,1,.3,1);border-left:3px solid var(--ocean)}
+#act-toast.show{transform:translateX(0)}
+.at-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:4px;animation:pulse 1.8s infinite}
+.at-body .at-msg{font-size:.76rem;color:var(--text);line-height:1.42}
+.at-body .at-msg strong{color:var(--ocean);font-weight:500}
+.at-body .at-time{font-size:.63rem;color:var(--text-l);margin-top:2px}
+@media(max-width:440px){#act-toast{left:10px;bottom:10px;max-width:calc(100vw - 20px)}}
 
 /* ── RESPONSIVE ── */
 @media(max-width:960px){
   .container{padding:0 28px}
-  .section{padding:80px 0}
-  #nav{padding:18px 28px}
-  #nav.scrolled{padding:12px 28px}
+  #nav{padding:16px 28px}
+  #nav.scrolled{padding:11px 28px}
   .nav-links{display:none}
   .ham{display:flex}
-  .about-grid,.location-grid,.contact-grid{grid-template-columns:1fr;gap:48px}
+  .about-grid,.location-grid,.contact-grid,.direct-grid{grid-template-columns:1fr;gap:44px}
   .about-img-float{display:none}
-  .about-badge{left:auto;right:20px;top:20px}
+  .about-badge{left:auto;right:18px;top:18px}
   .features-grid{grid-template-columns:repeat(2,1fr)}
-  .feat-card:last-child{grid-column:span 2}
+  .fc:last-child{grid-column:span 2}
   .rooms-grid{grid-template-columns:1fr 1fr}
-  .footer-top{grid-template-columns:1fr 1fr;gap:40px}
-  .form-row{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr 1fr;gap:36px}
 }
 @media(max-width:640px){
-  .container{padding:0 20px}
-  .section{padding:70px 0}
-  #nav{padding:16px 20px}
+  .container{padding:0 18px}
+  #nav{padding:14px 18px}
   .rooms-grid{grid-template-columns:1fr}
   .features-grid{grid-template-columns:1fr 1fr}
-  .feat-card:last-child{grid-column:auto}
+  .fc:last-child{grid-column:auto}
   .gallery-grid{grid-template-columns:1fr 1fr}
-  .g1,.g2,.g3,.g4,.g5,.g6{grid-column:span 1;aspect-ratio:1}
-  .footer-top{grid-template-columns:1fr;gap:36px}
+  .gi.g1,.gi.g2,.gi.g3,.gi.g4,.gi.g5,.gi.g6{grid-column:span 1;aspect-ratio:1;min-height:0}
+  .ft{grid-template-columns:1fr;gap:32px}
   .booking-btns{flex-direction:column;align-items:center}
   .hero-btns{flex-direction:column;align-items:center}
-  .contact-form{padding:28px 20px}
+  .cf{padding:24px 18px}
+  .ts-item:nth-child(3),.ts-item:nth-child(4){display:none}
 }
-/* ── HERO TRUST + GUARANTEE ── */
-.hero-trust{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(16px);padding:8px 20px;border-radius:40px;margin-bottom:1.4rem;font-size:.72rem;letter-spacing:.06em;color:rgba(255,255,255,.95);font-weight:400}
-.hero-trust .ht-stars{color:#FBBC04;letter-spacing:1px;font-size:.8rem}
-.hero-trust .ht-sep{opacity:.4}
-.hero-guarantee{font-size:.72rem;color:rgba(255,255,255,.58);margin-top:14px;letter-spacing:.06em}
-.hero-guarantee span{color:rgba(255,255,255,.88);font-weight:400}
-
-/* ── TRUST STRIP ── */
-#trust-strip{background:var(--white);border-bottom:1px solid var(--border);padding:18px 0}
-.trust-strip-inner{max-width:1200px;margin:0 auto;padding:0 48px;display:flex;align-items:center;justify-content:center;gap:0;flex-wrap:wrap}
-.ts-item{display:flex;align-items:center;gap:9px;padding:8px 28px;border-right:1px solid var(--beige2);font-size:.75rem;color:var(--text-m);font-weight:400}
-.ts-item:last-child{border-right:none}
-.ts-item svg{width:17px;height:17px;stroke:var(--ocean);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-.ts-item strong{color:var(--text);font-weight:500}
-@media(max-width:640px){.trust-strip-inner{gap:0;padding:0 12px}.ts-item{padding:6px 14px;font-size:.7rem}}
-
-/* ── ACTIVITY TOAST ── */
-#activity-toast{position:fixed;bottom:28px;left:28px;z-index:9999;background:#fff;border-radius:4px;box-shadow:0 8px 32px rgba(44,40,37,.18);padding:14px 18px;display:flex;align-items:center;gap:12px;max-width:300px;transform:translateX(-120%);transition:transform .5s cubic-bezier(.16,1,.3,1);border-left:3px solid var(--ocean)}
-#activity-toast.show{transform:translateX(0)}
-.toast-dot{width:8px;height:8px;border-radius:50%;background:#2ECC71;flex-shrink:0;animation:pulse 2s infinite}
-.toast-text{font-size:.78rem;color:var(--text);line-height:1.4}
-.toast-text strong{color:var(--ocean);font-weight:500}
-.toast-time{font-size:.65rem;color:var(--text-l);margin-top:2px}
-@media(max-width:480px){#activity-toast{left:12px;bottom:12px;max-width:calc(100vw - 24px)}}
-
-/* ── LIVE COUNTER IN ROOMS HEADER ── */
-.live-badge{display:inline-flex;align-items:center;gap:6px;background:#EBF7F0;color:#1A7A4A;font-size:.68rem;font-weight:500;padding:5px 14px;border-radius:20px;margin-top:10px}
-.live-badge .lb-dot{width:6px;height:6px;background:#2ECC71;border-radius:50%;animation:pulse 1.6s infinite}
-
-/* ── BOOKED-TIMES BADGE ── */
-.booked-line{font-size:.72rem;color:var(--text-l);margin-bottom:8px;display:flex;align-items:center;gap:5px}
-.booked-line svg{width:12px;height:12px;stroke:var(--sand);fill:none;stroke-width:2;stroke-linecap:round;flex-shrink:0}
-
-/* ── URGENCY BADGE ── */
-.urgency{display:inline-flex;align-items:center;gap:6px;background:#FFF3F0;color:#C0392B;font-size:.65rem;font-weight:500;letter-spacing:.08em;padding:5px 12px;border-radius:20px;margin-bottom:10px}
-.urgency-dot{width:6px;height:6px;background:#E74C3C;border-radius:50%;animation:pulse 1.6s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.4)}}
-
-/* ── ROOM BOOK BTN PROMINENT ── */
-.btn-book-room{background:var(--ocean);color:#fff;border-radius:2px;padding:11px 24px;font-size:.68rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;display:inline-flex;align-items:center;gap:6px;transition:all .35s cubic-bezier(.16,1,.3,1);text-decoration:none;white-space:nowrap}
-.btn-book-room:hover{background:var(--ocean-d);transform:translateY(-2px);box-shadow:0 8px 24px rgba(91,158,173,.35)}
-.btn-book-room svg{width:13px;height:13px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:transform .3s}
-.btn-book-room:hover svg{transform:translateX(3px)}
 </style>
 </head>
 <body>
+
+<!-- ACTIVITY TOAST -->
+<div id="act-toast">
+  <div class="at-dot"></div>
+  <div class="at-body">
+    <div class="at-msg" id="at-msg">Loading...</div>
+    <div class="at-time" id="at-time"></div>
+  </div>
+</div>
 
 <!-- STICKY BOOKING BAR -->
 <div id="booking-bar">
@@ -384,7 +410,7 @@ footer{background:var(--text);padding:60px 0 30px;color:rgba(250,248,244,.65)}
       <input type="date" id="bar-checkout">
     </div>
     <div class="bar-sep"></div>
-    <div class="bar-field" style="flex:0 1 140px">
+    <div class="bar-field" style="flex:0 1 130px">
       <label>Guests</label>
       <select id="bar-guests">
         <option>1 Guest</option>
@@ -393,7 +419,10 @@ footer{background:var(--text);padding:60px 0 30px;color:rgba(250,248,244,.65)}
         <option>4 Guests</option>
       </select>
     </div>
-    <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="bar-btn">Check Availability</a>
+    <div class="bar-cta">
+      <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="bar-btn">Check Availability</a>
+      <span class="bar-guarantee">Best price guaranteed &middot; Free cancellation</span>
+    </div>
   </div>
 </div>
 
@@ -425,7 +454,7 @@ footer{background:var(--text);padding:60px 0 30px;color:rgba(250,248,244,.65)}
   <a href="#location" onclick="toggleMenu()">Location</a>
   <a href="#gallery" onclick="toggleMenu()">Gallery</a>
   <a href="#contact" onclick="toggleMenu()">Contact</a>
-  <a href="#booking" onclick="toggleMenu()">Book Now</a>
+  <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="mob-book-cta" onclick="toggleMenu()">Book Direct &amp; Save 10%</a>
 </div>
 
 <!-- HERO -->
@@ -433,20 +462,20 @@ footer{background:var(--text);padding:60px 0 30px;color:rgba(250,248,244,.65)}
   <div class="hero-bg" id="heroBg"></div>
   <div class="hero-ov"></div>
   <div class="hero-cnt">
-    <div class="hero-trust">
-      <span class="ht-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-      Rated 4.5/5 by guests
-      <span class="ht-sep">&middot;</span>
-      500+ stays
+    <div class="hero-badge">
+      <span class="hb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+      <span class="hb-text">Rated 4.5/5 from 500+ guests</span>
+      <span class="hb-sep">&middot;</span>
+      <span class="hb-text">Agoda &amp; Booking.com</span>
     </div>
-    <p class="hero-eyebrow">North Pattaya &middot; Only 150m to Pattaya Beach</p>
+    <p class="hero-eyebrow">North Pattaya &middot; 150m to Pattaya Beach</p>
     <h1 class="hero-title">Stay Close to the Sea.<br>Experience <em>Pattaya</em> in Style</h1>
-    <p class="hero-sub">Modern chic hotel just steps from Pattaya Beach, offering comfort, convenience, and a relaxing coastal escape you won't forget.</p>
+    <p class="hero-sub">A modern chic hotel just steps from Pattaya Beach — comfortable, affordable, and a short walk to the sea every single morning.</p>
     <div class="hero-btns">
-      <a href="https://www.facebook.com/sevenzeachichotelpattaya/?locale=th_TH" target="_blank" rel="noopener" class="btn btn-ocean" style="padding:16px 38px;font-size:.76rem">
+      <a href="https://www.facebook.com/sevenzeachichotelpattaya/?locale=th_TH" target="_blank" rel="noopener" class="btn btn-hero-primary">
         Book Direct &amp; Save 10%
       </a>
-      <a href="#booking" class="btn btn-white" style="color:var(--ocean-d);padding:16px 32px;font-size:.76rem">Check Availability</a>
+      <a href="#rooms" class="btn btn-hero-secondary">Check Availability</a>
     </div>
     <p class="hero-guarantee"><span>Best price guaranteed</span> &nbsp;&middot;&nbsp; <span>Free cancellation</span></p>
   </div>
@@ -458,96 +487,90 @@ footer{background:var(--text);padding:60px 0 30px;color:rgba(250,248,244,.65)}
 
 <!-- WAVE -->
 <div class="wave-wrap" style="background:var(--white)">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 64" preserveAspectRatio="none">
-    <path d="M0,32 C240,64 480,0 720,32 C960,64 1200,0 1440,32 L1440,64 L0,64 Z" fill="var(--cream)"/>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 56" preserveAspectRatio="none">
+    <path d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,56 L0,56 Z" fill="var(--cream)"/>
   </svg>
 </div>
 
 <!-- TRUST STRIP -->
 <div id="trust-strip">
-  <div class="trust-strip-inner">
+  <div class="ts-inner">
     <div class="ts-item">
-      <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      <span><strong>Secure Booking</strong> — SSL protected</span>
+      <svg class="ts-icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      <span><strong>Secure Booking</strong></span>
     </div>
     <div class="ts-item">
-      <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-      <span><strong>No Hidden Fees</strong> — Price as shown</span>
+      <svg class="ts-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+      <span><strong>No Hidden Fees</strong></span>
     </div>
     <div class="ts-item">
-      <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-      <span><strong>Instant Confirmation</strong> — Immediate reply</span>
+      <svg class="ts-icon" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      <span><strong>Instant Confirmation</strong></span>
     </div>
     <div class="ts-item">
-      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      <span><strong>24h Front Desk</strong> — Always here for you</span>
+      <svg class="ts-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <span><strong>24h Front Desk</strong></span>
     </div>
   </div>
 </div>
 
-<!-- ACTIVITY TOAST -->
-<div id="activity-toast">
-  <div class="toast-dot"></div>
-  <div>
-    <div class="toast-text"><strong id="toast-name">Somchai</strong> from Bangkok just booked a Deluxe Room</div>
-    <div class="toast-time" id="toast-time">2 minutes ago</div>
-  </div>
-</div>
-
-<!-- SOCIAL PROOF / REVIEWS -->
+<!-- REVIEWS -->
 <section id="reviews">
   <div class="container">
-    <div class="reviews-header reveal">
-      <div class="rating-big">
-        <div class="rating-score">4.5</div>
-        <div class="rating-right">
-          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span class="rating-count">Rated by verified guests on Agoda &amp; Booking.com</span>
+    <div class="reviews-top reveal">
+      <div class="rating-pill">
+        <div class="rating-num">4.5</div>
+        <div class="rating-detail">
+          <span class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="r-sub">Rated by verified guests on Agoda &amp; Booking.com</span>
         </div>
       </div>
-      <p class="label">What Guests Are Saying</p>
-      <div class="ota-badges">
-        <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="ota-badge">
+      <p class="label" style="margin-bottom:.5rem">What guests are saying</p>
+      <div class="ota-row">
+        <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="ota-chip">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Available on Agoda
         </a>
-        <a href="https://www.booking.com/hotel/th/po-seven-zea-chic-hotel.th.html?aid=356980" target="_blank" rel="noopener" class="ota-badge">
+        <a href="https://www.booking.com/hotel/th/po-seven-zea-chic-hotel.th.html?aid=356980" target="_blank" rel="noopener" class="ota-chip">
           <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Available on Booking.com
         </a>
       </div>
     </div>
     <div class="reviews-grid">
-      <div class="review-card reveal d1">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">"Incredible location — walked to the beach in 2 minutes. The room was clean, modern, and exactly as pictured. Staff were so kind and helpful. Will definitely be back!"</p>
-        <div class="review-author">
-          <div class="review-avatar">S</div>
+      <div class="rc reveal d1">
+        <span class="rc-via">Agoda</span>
+        <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rc-text">"We walked to the beach in literally 2 minutes. Room was clean, bed was comfortable, staff were super friendly and helped us with everything. Honestly better than expected for the price. Will come back next trip."</p>
+        <div class="rc-author">
+          <div class="rc-av" style="background:linear-gradient(135deg,var(--ocean-l),var(--ocean))">S</div>
           <div>
-            <p class="review-name">Sarah M.</p>
-            <p class="review-via">Verified stay &middot; via Agoda</p>
+            <p class="rc-name">Siriporn C.</p>
+            <p class="rc-meta">Stayed 3 nights &middot; March 2025</p>
           </div>
         </div>
       </div>
-      <div class="review-card reveal d2">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="review-text">"Best value in North Pattaya. The rooftop pool is gorgeous — relaxed there every evening. Super easy walk to the beach. Quiet area but close to everything you need."</p>
-        <div class="review-author">
-          <div class="review-avatar" style="background:linear-gradient(135deg,var(--sand-l),var(--sand))">J</div>
+      <div class="rc reveal d2">
+        <span class="rc-via">Booking.com</span>
+        <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rc-text">"Rooftop pool is great, especially at sunset. The location is perfect — quiet enough to relax but close to everything. Parking was easy. The Sea View room was 100% worth upgrading to."</p>
+        <div class="rc-author">
+          <div class="rc-av" style="background:linear-gradient(135deg,var(--sand-l),var(--sand))">J</div>
           <div>
-            <p class="review-name">James K.</p>
-            <p class="review-via">Verified stay &middot; via Booking.com</p>
+            <p class="rc-name">James W.</p>
+            <p class="rc-meta">Stayed 4 nights &middot; Feb 2025</p>
           </div>
         </div>
       </div>
-      <div class="review-card reveal d3">
-        <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
-        <p class="review-text">"Stylish, clean, and right near the beach. The Sea View room was worth every baht. Free parking was a huge bonus. 24-hour staff always ready to help. Highly recommend."</p>
-        <div class="review-author">
-          <div class="review-avatar" style="background:linear-gradient(135deg,#8EC5D6,var(--ocean-d))">A</div>
+      <div class="rc reveal d3">
+        <span class="rc-via">Agoda</span>
+        <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+        <p class="rc-text">"Good value, nice room, and the beach is incredibly close — you can smell the sea from your window. Check-in was smooth, no issues at all. The free parking saved us a lot. Would recommend to anyone visiting Pattaya."</p>
+        <div class="rc-author">
+          <div class="rc-av" style="background:linear-gradient(135deg,#8EC5D6,var(--ocean-d))">N</div>
           <div>
-            <p class="review-name">Aiko T.</p>
-            <p class="review-via">Verified stay &middot; via Agoda</p>
+            <p class="rc-name">Nattaya R.</p>
+            <p class="rc-meta">Stayed 2 nights &middot; Jan 2025</p>
           </div>
         </div>
       </div>
@@ -556,37 +579,37 @@ footer{background:var(--text);padding:60px 0 30px;color:rgba(250,248,244,.65)}
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="section" style="background:var(--white);padding:110px 0">
+<section id="about" style="background:var(--white);padding:108px 0">
   <div class="container">
     <div class="about-grid">
       <div class="about-img-wrap reveal-l">
         <img class="about-img-main" src="LOBBY.webp" alt="Seven Zea Hotel lobby" loading="lazy">
         <img class="about-img-float" src="พักผ่อน.webp" alt="Relaxation area" loading="lazy">
         <div class="about-badge">
-          <span class="num">150<sup style="font-size:.7em">m</sup></span>
-          <span class="sub">to Pattaya Beach</span>
+          <span class="ab-num">150<sup style="font-size:.65em">m</sup></span>
+          <span class="ab-sub">to Pattaya Beach</span>
         </div>
       </div>
-      <div class="about-text reveal-r" style="padding-right:20px">
-        <p class="label">Our Story</p>
-        <h2 class="sec-title">A Coastal Retreat in the Heart of North Pattaya</h2>
+      <div class="reveal-r" style="padding-right:16px">
+        <span class="label">Our Story</span>
+        <h2 class="sec-title">A Comfortable Base, Right by the Sea</h2>
         <div class="divider"></div>
-        <p>Seven Zea Chic Hotel is a modern boutique hotel located in North Pattaya, just under 150 meters from Pattaya Beach. Designed for comfort and simplicity, it offers a relaxing stay near the sea while staying connected to the city's main attractions.</p>
-        <p>Our thoughtfully designed rooms, attentive service, and ideal beachside location make Seven Zea the perfect base for both leisure travelers and those seeking a calm coastal escape in Pattaya.</p>
-        <div style="display:flex;gap:36px;margin-top:36px">
+        <p style="color:var(--text-m);margin-bottom:1.3rem;font-size:.97rem;line-height:1.82">Seven Zea Chic Hotel is a modern boutique hotel in North Pattaya — under 150 meters from Pattaya Beach. We're not trying to be the fanciest hotel in the city. We're trying to be the best-value, most convenient one.</p>
+        <p style="color:var(--text-m);font-size:.97rem;line-height:1.82">Clean rooms, a rooftop pool, friendly staff, free parking, and the beach literally at your doorstep. That's what we do, and we do it well.</p>
+        <div class="about-stats">
           <div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--ocean);line-height:1">24<span style="font-size:1.2rem">h</span></p>
-            <p style="font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-l);margin-top:4px">Front Desk</p>
+            <p class="stat-n">24<span style="font-size:1.1rem">h</span></p>
+            <p class="stat-l">Front Desk</p>
           </div>
-          <div style="width:1px;background:var(--beige2)"></div>
+          <div class="stat-sep"></div>
           <div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--ocean);line-height:1">100<span style="font-size:1.2rem">%</span></p>
-            <p style="font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-l);margin-top:4px">Ocean Vibes</p>
+            <p class="stat-n">500<span style="font-size:1.1rem">+</span></p>
+            <p class="stat-l">Happy Guests</p>
           </div>
-          <div style="width:1px;background:var(--beige2)"></div>
+          <div class="stat-sep"></div>
           <div>
-            <p style="font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--ocean);line-height:1">★ 4.5</p>
-            <p style="font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;color:var(--text-l);margin-top:4px">Guest Rating</p>
+            <p class="stat-n">4.5<span style="font-size:1.1rem"> ★</span></p>
+            <p class="stat-l">Guest Rating</p>
           </div>
         </div>
       </div>
@@ -595,175 +618,153 @@ footer{background:var(--text);padding:60px 0 30px;color:rgba(250,248,244,.65)}
 </section>
 
 <!-- FEATURES -->
-<section id="features" class="section" style="background:var(--beige);padding:100px 0">
+<section id="features" style="background:var(--beige);padding:96px 0">
   <div class="container">
-    <div class="text-center reveal">
-      <p class="label">Why Choose Us</p>
+    <div class="reveal" style="text-align:center">
+      <span class="label">Why Choose Us</span>
       <h2 class="sec-title">Everything You Need, Steps from the Sea</h2>
       <div class="divider c"></div>
     </div>
     <div class="features-grid">
-      <div class="feat-card reveal d1">
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
-        <p class="feat-title">150m to the Beach</p>
-        <p class="feat-desc">Walk to Pattaya Beach in under two minutes — wake up to sea breezes every morning.</p>
+      <div class="fc reveal d1">
+        <div class="fc-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <p class="fc-title">150m to the Beach</p>
+        <p class="fc-desc">Walk to Pattaya Beach in under 2 minutes. Sea breeze every morning, no taxi needed.</p>
       </div>
-      <div class="feat-card reveal d2">
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        </div>
-        <p class="feat-title">Private Parking</p>
-        <p class="feat-desc">Secure on-site private parking available for all guests — travel with ease.</p>
+      <div class="fc reveal d2">
+        <div class="fc-icon"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <p class="fc-title">Free Private Parking</p>
+        <p class="fc-desc">Secure on-site parking for all guests. No extra charge, no stress.</p>
       </div>
-      <div class="feat-card reveal d3">
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 22V12m0 0H2m10 0h10M5 12V8a7 7 0 0 1 14 0v4"/></svg>
-        </div>
-        <p class="feat-title">Rooftop Pool</p>
-        <p class="feat-desc">Swim with panoramic views over Pattaya — the perfect way to unwind at sunset.</p>
+      <div class="fc reveal d3">
+        <div class="fc-icon"><svg viewBox="0 0 24 24"><path d="M12 22V12m0 0H2m10 0h10M5 12V8a7 7 0 0 1 14 0v4"/></svg></div>
+        <p class="fc-title">Rooftop Pool</p>
+        <p class="fc-desc">Swim above the city. The rooftop pool with Pattaya views is worth the stay alone.</p>
       </div>
-      <div class="feat-card reveal d4">
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" fill="currentColor" stroke="none" style="stroke:none;fill:var(--ocean)"/></svg>
-        </div>
-        <p class="feat-title">Free High-Speed Wi-Fi</p>
-        <p class="feat-desc">Stay connected with complimentary high-speed wireless internet throughout the hotel.</p>
+      <div class="fc reveal d4">
+        <div class="fc-icon"><svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><circle cx="12" cy="20" r="1" style="fill:var(--ocean);stroke:none"/></svg></div>
+        <p class="fc-title">Free High-Speed Wi-Fi</p>
+        <p class="fc-desc">Fast, reliable Wi-Fi throughout the hotel. Works great for remote work too.</p>
       </div>
-      <div class="feat-card reveal d5">
-        <div class="feat-icon">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-        </div>
-        <p class="feat-title">24-Hour Front Desk</p>
-        <p class="feat-desc">Our friendly team is available around the clock to assist you anytime you need.</p>
+      <div class="fc reveal d5">
+        <div class="fc-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+        <p class="fc-title">24-Hour Front Desk</p>
+        <p class="fc-desc">Our team is here around the clock. Late arrival? Early departure? We've got you.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ROOMS -->
-<section id="rooms" class="section" style="background:var(--white);padding:110px 0">
+<section id="rooms" style="background:var(--white);padding:108px 0">
   <div class="container">
-    <div class="text-center reveal">
-      <p class="label">Accommodations</p>
-      <h2 class="sec-title">Rooms Designed for Coastal Comfort</h2>
+    <div class="rooms-header reveal">
+      <span class="label" style="display:block;text-align:center">Accommodations</span>
+      <h2 class="sec-title" style="text-align:center">Pick Your Room</h2>
       <div class="divider c"></div>
-      <p style="color:var(--text-m);max-width:500px;margin:0 auto;font-size:.95rem">Every room is thoughtfully appointed with modern amenities and a calm, light-filled aesthetic.</p>
-      <div class="live-badge" style="margin:16px auto 0"><span class="lb-dot"></span> Limited availability this week — rooms filling fast</div>
+      <p style="color:var(--text-m);max-width:480px;margin:0 auto;font-size:.93rem;text-align:center">All rooms include air-con, flat-screen TV, private bathroom, and comfortable bedding. Beach is 150m away.</p>
+      <div style="text-align:center"><div class="live-avail"><span class="ld"></span> Limited availability this week — rooms filling fast</div></div>
     </div>
     <div class="rooms-grid">
 
-      <!-- Superior -->
+      <!-- Superior Room -->
       <div class="room-card reveal d1">
         <div class="room-img">
-          <img src="เตียงเดียว 2 เตียง.webp" alt="Superior Room" loading="lazy">
+          <img src="เตียงเดียว 2 เตียง.webp" alt="Superior Room — twin beds" loading="lazy">
           <span class="room-tag" style="background:var(--sand)">Best Value</span>
         </div>
         <div class="room-body">
-          <div class="urgency"><span class="urgency-dot"></span> Only 3 rooms left</div>
+          <div class="urgency-row">
+            <div class="urgency"><span class="ud"></span> Only 3 rooms left</div>
+            <div class="booked-tag"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Booked 4× today</div>
+          </div>
           <h3 class="room-name">Superior Room</h3>
-          <p class="booked-line"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Booked 4 times in the last 24 hours</p>
-          <div class="room-amenities">
-            <span class="amen">
-              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12c0-2.5 1-4.8 2.5-6.5"/></svg>
-              Air Conditioning
-            </span>
-            <span class="amen">
-              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-              Flat-screen TV
-            </span>
-            <span class="amen">
-              <svg viewBox="0 0 24 24"><path d="M9 12h6M9 16h6M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
-              Private Bathroom
-            </span>
-            <span class="amen">
-              <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6l9-4 9 4M3 18l9 4 9-4"/></svg>
-              Comfortable Bedding
-            </span>
+          <div class="amenities">
+            <span class="amen"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12"/></svg>Air Con</span>
+            <span class="amen"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Flat-screen TV</span>
+            <span class="amen"><svg viewBox="0 0 24 24"><path d="M9 12h6M9 16h6M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>Private Bathroom</span>
+            <span class="amen"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 6l9-4 9 4M3 18l9 4 9-4"/></svg>Comfortable Bedding</span>
           </div>
           <div class="room-footer">
-            <div class="room-price">From 900<span>THB / night</span></div>
-            <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="btn-book-room">
-              Book Now
-              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+            <div class="price-row">
+              <span class="room-price">900</span>
+              <span class="room-price-unit">THB / night</span>
+            </div>
+            <div class="room-cta-wrap">
+              <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="btn-book-direct">
+                Book Direct &amp; Save 10%
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <p class="room-sub"><span>Best price guaranteed</span> &middot; Free cancellation</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Deluxe -->
-      <div class="room-card reveal d2" style="box-shadow:0 0 0 2px var(--ocean),0 8px 32px var(--shadow)">
+      <!-- Deluxe Room -->
+      <div class="room-card featured reveal d2">
         <div class="room-img">
-          <img src="เตียงคู่.webp" alt="Deluxe Room" loading="lazy">
+          <img src="เตียงคู่.webp" alt="Deluxe Room — double bed" loading="lazy">
           <span class="room-tag" style="background:var(--ocean-d)">&#9733; Most Popular</span>
         </div>
         <div class="room-body">
-          <div class="urgency"><span class="urgency-dot"></span> Only 2 rooms left</div>
+          <div class="urgency-row">
+            <div class="urgency"><span class="ud"></span> Only 2 rooms left</div>
+            <div class="booked-tag"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Booked 7× today</div>
+          </div>
           <h3 class="room-name">Deluxe Room</h3>
-          <p class="booked-line"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Booked 7 times in the last 24 hours</p>
-          <div class="room-amenities">
-            <span class="amen">
-              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12c0-2.5 1-4.8 2.5-6.5"/></svg>
-              Air Conditioning
-            </span>
-            <span class="amen">
-              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-              Flat-screen TV
-            </span>
-            <span class="amen">
-              <svg viewBox="0 0 24 24"><path d="M9 12h6M9 16h6M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
-              Private Bathroom
-            </span>
-            <span class="amen">
-              <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6l9-4 9 4M3 18l9 4 9-4"/></svg>
-              Comfortable Bedding
-            </span>
+          <div class="amenities">
+            <span class="amen"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12"/></svg>Air Con</span>
+            <span class="amen"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Flat-screen TV</span>
+            <span class="amen"><svg viewBox="0 0 24 24"><path d="M9 12h6M9 16h6M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>Private Bathroom</span>
+            <span class="amen"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 6l9-4 9 4M3 18l9 4 9-4"/></svg>Comfortable Bedding</span>
           </div>
           <div class="room-footer">
-            <div class="room-price">From 1,200<span>THB / night</span></div>
-            <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="btn-book-room">
-              Book Now
-              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+            <div class="price-row">
+              <span class="room-price">1,200</span>
+              <span class="room-price-unit">THB / night</span>
+            </div>
+            <div class="room-cta-wrap">
+              <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="btn-book-direct">
+                Book Direct &amp; Save 10%
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <p class="room-sub"><span>Best price guaranteed</span> &middot; Free cancellation</p>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- Sea View -->
+      <!-- Sea View Room -->
       <div class="room-card reveal d3">
         <div class="room-img">
           <img src="วิวห้อง.webp" alt="Sea View Room" loading="lazy">
-          <span class="room-tag" style="background:var(--sand)">Best View</span>
+          <span class="room-tag" style="background:var(--ocean)">Best View</span>
         </div>
         <div class="room-body">
-          <div class="urgency"><span class="urgency-dot"></span> Only 1 room left</div>
+          <div class="urgency-row">
+            <div class="urgency"><span class="ud"></span> Only 1 room left</div>
+            <div class="booked-tag"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Booked 5× today</div>
+          </div>
           <h3 class="room-name">Sea View Room</h3>
-          <p class="booked-line"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Booked 5 times in the last 24 hours</p>
-          <div class="room-amenities">
-            <span class="amen">
-              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12c0-2.5 1-4.8 2.5-6.5"/></svg>
-              Air Conditioning
-            </span>
-            <span class="amen">
-              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-              Flat-screen TV
-            </span>
-            <span class="amen">
-              <svg viewBox="0 0 24 24"><path d="M9 12h6M9 16h6M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>
-              Private Bathroom
-            </span>
-            <span class="amen">
-              <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6l9-4 9 4M3 18l9 4 9-4"/></svg>
-              Comfortable Bedding
-            </span>
+          <div class="amenities">
+            <span class="amen"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12"/></svg>Air Con</span>
+            <span class="amen"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>Flat-screen TV</span>
+            <span class="amen"><svg viewBox="0 0 24 24"><path d="M9 12h6M9 16h6M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/></svg>Private Bathroom</span>
+            <span class="amen"><svg viewBox="0 0 24 24"><path d="M3 12h18M3 6l9-4 9 4M3 18l9 4 9-4"/></svg>Comfortable Bedding</span>
           </div>
           <div class="room-footer">
-            <div class="room-price">From 1,600<span>THB / night</span></div>
-            <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="btn-book-room">
-              Book Now
-              <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+            <div class="price-row">
+              <span class="room-price">1,600</span>
+              <span class="room-price-unit">THB / night</span>
+            </div>
+            <div class="room-cta-wrap">
+              <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="btn-book-direct">
+                Book Direct &amp; Save 10%
+                <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <p class="room-sub"><span>Best price guaranteed</span> &middot; Free cancellation</p>
+            </div>
           </div>
         </div>
       </div>
@@ -773,64 +774,42 @@ footer{background:var(--text);padding:60px 0 30px;color:rgba(250,248,244,.65)}
 </section>
 
 <!-- WHY BOOK DIRECT -->
-<section id="direct">
+<section id="direct" style="background:var(--beige);padding:96px 0">
   <div class="container">
     <div class="direct-grid">
       <div>
         <div class="reveal">
-          <p class="label">Book Smart</p>
+          <span class="label">Book Smarter</span>
           <h2 class="sec-title">Why Book Direct?</h2>
           <div class="divider"></div>
-          <p style="color:var(--text-m);line-height:1.85">Skip the middlemen and book straight with us. You'll always get the best deal, no surprises — and we'll make sure your stay is perfect from day one.</p>
+          <p style="color:var(--text-m);line-height:1.82;font-size:.95rem">Booking through us directly means you always get the best price — and we can take better care of you before and during your stay.</p>
         </div>
         <div class="direct-points">
-          <div class="direct-point reveal d1">
-            <div class="dp-icon">
-              <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            </div>
-            <div>
-              <p class="dp-title">Best Price Guarantee</p>
-              <p class="dp-desc">Book direct and you'll always pay the lowest available rate — or we'll match it.</p>
-            </div>
+          <div class="dp reveal d1">
+            <div class="dp-ico"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div><p class="dp-title">Best Price Guarantee</p><p class="dp-desc">We match or beat any price you find elsewhere. Always.</p></div>
           </div>
-          <div class="direct-point reveal d2">
-            <div class="dp-icon">
-              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <div>
-              <p class="dp-title">No Hidden Fees</p>
-              <p class="dp-desc">The price you see is the price you pay. No platform surcharges or surprise charges.</p>
-            </div>
+          <div class="dp reveal d2">
+            <div class="dp-ico"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><p class="dp-title">No Commission Fees</p><p class="dp-desc">No OTA markup means lower prices. That saving goes straight to you.</p></div>
           </div>
-          <div class="direct-point reveal d3">
-            <div class="dp-icon">
-              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <div>
-              <p class="dp-title">Priority Room Selection</p>
-              <p class="dp-desc">Direct guests get first pick of available room types and preferred floors.</p>
-            </div>
+          <div class="dp reveal d3">
+            <div class="dp-ico"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+            <div><p class="dp-title">Priority Room Selection</p><p class="dp-desc">Direct bookers get first pick of available rooms and preferred floors.</p></div>
           </div>
-          <div class="direct-point reveal d4">
-            <div class="dp-icon">
-              <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </div>
-            <div>
-              <p class="dp-title">Exclusive Offers</p>
-              <p class="dp-desc">Early check-in, late check-out requests, and special arrangements — only for direct guests.</p>
-            </div>
+          <div class="dp reveal d4">
+            <div class="dp-ico"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+            <div><p class="dp-title">Exclusive Deals</p><p class="dp-desc">Early check-in, late checkout, and special requests — available only for direct guests.</p></div>
           </div>
         </div>
       </div>
       <div class="reveal-r">
-        <div class="direct-cta-box">
-          <span class="saving-pill">Direct Booking Benefit</span>
+        <div class="direct-box">
+          <span class="db-pill">Direct Booking Offer</span>
           <h3>Save up to 10%<br>on Every Stay</h3>
-          <p>Walk to the beach in 2 minutes. Relax by the rooftop pool. Enjoy a coastal retreat without overpaying. Book direct, save more.</p>
-          <a href="https://www.facebook.com/sevenzeachichotelpattaya/?locale=th_TH" target="_blank" rel="noopener" class="btn btn-white" style="font-weight:500">
-            Book Direct Now
-          </a>
-          <p style="font-size:.7rem;color:rgba(255,255,255,.5);margin-top:16px">Free cancellation &middot; Best rate guaranteed</p>
+          <p>Beach in 2 minutes. Rooftop pool. Friendly staff. Good beds. Book direct and pay less — no middleman, no markup.</p>
+          <a href="https://www.facebook.com/sevenzeachichotelpattaya/?locale=th_TH" target="_blank" rel="noopener" class="btn btn-white">Book Direct Now</a>
+          <p class="db-sub">Free cancellation &middot; Best rate guaranteed</p>
         </div>
       </div>
     </div>
@@ -838,188 +817,133 @@ footer{background:var(--text);padding:60px 0 30px;color:rgba(250,248,244,.65)}
 </section>
 
 <!-- LOCATION -->
-<section id="location" class="section" style="background:var(--beige);padding:110px 0">
+<section id="location" style="background:var(--white);padding:108px 0">
   <div class="container">
     <div class="location-grid">
       <div>
         <div class="reveal">
-          <p class="label">Location</p>
-          <h2 class="sec-title">Perfectly Located in North Pattaya</h2>
+          <span class="label">Location</span>
+          <h2 class="sec-title">Right in the Middle of Everything</h2>
           <div class="divider"></div>
-          <p style="color:var(--text-m);line-height:1.85;margin-bottom:2rem">Seven Zea Chic Hotel sits in one of North Pattaya's most convenient spots — close to the beach, key attractions, and the heart of the city. Everything is within easy reach.</p>
+          <p style="color:var(--text-m);line-height:1.82;margin-bottom:24px;font-size:.95rem">North Pattaya is one of the most convenient spots in the city — close to the beach, quiet enough to relax, and easy to explore from.</p>
         </div>
         <div class="nearby-list">
-          <div class="nearby-item reveal d1">
-            <div class="nearby-dot"></div>
-            <div class="nearby-info">
-              <p class="place">Pattaya Beach</p>
-              <p class="dist">150 meters &middot; ~2 min walk</p>
-            </div>
-          </div>
-          <div class="nearby-item reveal d2">
-            <div class="nearby-dot" style="background:var(--sand)"></div>
-            <div class="nearby-info">
-              <p class="place">Mini Siam (เมืองจำลอง)</p>
-              <p class="dist">Nearby landmark &middot; Famous miniature park</p>
-            </div>
-          </div>
-          <div class="nearby-item reveal d3">
-            <div class="nearby-dot" style="background:var(--ocean-d)"></div>
-            <div class="nearby-info">
-              <p class="place">North Pattaya Road</p>
-              <p class="dist">Restaurants, shops &amp; entertainment</p>
-            </div>
-          </div>
-          <div class="nearby-item reveal d4">
-            <div class="nearby-dot" style="background:var(--beige2);border:2px solid var(--ocean)"></div>
-            <div class="nearby-info">
-              <p class="place">Pattaya City Centre</p>
-              <p class="dist">Easy access to Pattaya's main attractions</p>
-            </div>
-          </div>
+          <div class="nearby-item reveal d1"><div class="nd" style="background:var(--ocean)"></div><div><p class="ni-place">Pattaya Beach</p><p class="ni-dist">150 meters &middot; ~2 min walk</p></div></div>
+          <div class="nearby-item reveal d2"><div class="nd" style="background:var(--sand)"></div><div><p class="ni-place">Mini Siam (เมืองจำลอง)</p><p class="ni-dist">Nearby landmark &middot; Famous miniature park</p></div></div>
+          <div class="nearby-item reveal d3"><div class="nd" style="background:var(--ocean-d)"></div><div><p class="ni-place">North Pattaya Road</p><p class="ni-dist">Restaurants, cafes &amp; convenience stores</p></div></div>
+          <div class="nearby-item reveal d4"><div class="nd" style="background:var(--beige2);outline:2px solid var(--ocean)"></div><div><p class="ni-place">Pattaya City Centre</p><p class="ni-dist">Entertainment, shopping &amp; nightlife</p></div></div>
         </div>
       </div>
       <div class="location-map reveal-r">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d967.1837!2d100.8856979!3d12.9437836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31029601eaa4fdbb%3A0xce501ad902001651!2sSeven%20Zea!5e0!3m2!1sen!2sth!4v1711630000000!5m2!1sen!2sth"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          title="Seven Zea Hotel location map"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d967.1837!2d100.8856979!3d12.9437836!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31029601eaa4fdbb%3A0xce501ad902001651!2sSeven%20Zea!5e0!3m2!1sen!2sth!4v1711630000000!5m2!1sen!2sth" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Seven Zea Hotel map"></iframe>
       </div>
     </div>
   </div>
 </section>
 
 <!-- GALLERY -->
-<section id="gallery" class="section" style="background:var(--white);padding:110px 0">
+<section id="gallery" style="background:var(--beige);padding:108px 0">
   <div class="container">
-    <div class="text-center reveal">
-      <p class="label">Gallery</p>
-      <h2 class="sec-title">Life at Seven Zea</h2>
+    <div class="reveal" style="text-align:center">
+      <span class="label">Gallery</span>
+      <h2 class="sec-title">See It for Yourself</h2>
       <div class="divider c"></div>
     </div>
     <div class="gallery-grid">
-      <div class="g-item g1 reveal">
-        <img src="หน้าหลัก.webp" alt="Hotel exterior" loading="lazy" style="height:100%;min-height:420px">
-      </div>
-      <div class="g-item g2 reveal d1">
-        <img src="วิว.jpg" alt="Sea view" loading="lazy">
-      </div>
-      <div class="g-item g3 reveal d2">
-        <img src="เตียงคู่ 1 เดียว 1 ครอบครัว พ่อแม่ลูก.webp" alt="Family room" loading="lazy">
-      </div>
-      <div class="g-item g4 reveal d3">
-        <img src="วิว 2.webp" alt="Pattaya view" loading="lazy">
-      </div>
-      <div class="g-item g5 reveal d4">
-        <img src="ห้องน้ำ.jpg" alt="Bathroom" loading="lazy">
-      </div>
-      <div class="g-item g6 reveal d5">
-        <img src="LOBBY.webp" alt="Hotel lobby" loading="lazy">
-      </div>
+      <div class="gi g1 reveal"><img src="หน้าหลัก.webp" alt="Hotel exterior"></div>
+      <div class="gi g2 reveal d1"><img src="วิว.jpg" alt="Sea view" loading="lazy"></div>
+      <div class="gi g3 reveal d2"><img src="เตียงคู่ 1 เดียว 1 ครอบครัว พ่อแม่ลูก.webp" alt="Family room" loading="lazy"></div>
+      <div class="gi g4 reveal d3"><img src="วิว 2.webp" alt="Pattaya view" loading="lazy"></div>
+      <div class="gi g5 reveal d4"><img src="ห้องน้ำ.jpg" alt="Bathroom" loading="lazy"></div>
+      <div class="gi g6 reveal d5"><img src="LOBBY.webp" alt="Lobby" loading="lazy"></div>
     </div>
   </div>
 </section>
 
-<!-- BOOKING -->
-<section id="booking" style="background:linear-gradient(145deg,#2E7A8C 0%,var(--ocean) 50%,#4A9AAC 100%);padding:110px 0;position:relative;overflow:hidden">
-  <div style="position:absolute;inset:0;background:url('หน้าหลัก.webp') center/cover no-repeat;opacity:.12"></div>
+<!-- BOOKING CTA -->
+<section id="booking" style="padding:108px 0;position:relative;overflow:hidden">
   <div class="container">
-    <div class="booking-inner reveal">
-      <p class="label" style="color:rgba(255,255,255,.65)">Limited Availability This Week</p>
-      <h2 class="sec-title" style="color:#fff;font-size:clamp(2.2rem,5vw,3.8rem)">Reserve Your Room in 2 Minutes</h2>
-      <div class="divider" style="background:linear-gradient(90deg,rgba(255,255,255,.2),rgba(255,255,255,.8),rgba(255,255,255,.2));margin:0 auto 1.8rem;width:80px"></div>
-      <p class="booking-sub">150 meters to the beach. Walk there in under 2 minutes. Rooms fill up fast during weekends — secure your coastal escape now before availability runs out.</p>
-      <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.12);padding:8px 20px;border-radius:30px;margin-bottom:2rem;font-size:.72rem;color:rgba(255,255,255,.85)">
-        <span style="width:7px;height:7px;background:#6EE7A0;border-radius:50%;display:inline-block;animation:pulse 1.6s infinite;flex-shrink:0"></span>
-        <span id="viewers-count">12 people</span> are looking at rooms right now
+    <div class="booking-wrap reveal">
+      <div class="booking-urgency">
+        <span class="bu-dot"></span>
+        Limited availability this week — rooms fill fast on weekends
       </div>
+      <span class="label" style="color:rgba(255,255,255,.6)">Ready to Book?</span>
+      <h2 class="sec-title" style="color:#fff;font-size:clamp(2rem,4.8vw,3.6rem)">Reserve Your Room in 2 Minutes</h2>
+      <div class="divider c" style="background:linear-gradient(90deg,rgba(255,255,255,.2),rgba(255,255,255,.8),rgba(255,255,255,.2));width:70px"></div>
+      <p class="booking-sub">150 meters to the beach. Walk there before breakfast. Rooms are going fast — don't wait and miss out.</p>
       <div class="booking-btns">
-        <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="btn btn-agoda" style="padding:16px 40px;font-size:.74rem">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="btn btn-agoda" style="padding:15px 36px;font-size:.73rem">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Book via Agoda
         </a>
-        <a href="https://www.booking.com/hotel/th/po-seven-zea-chic-hotel.th.html?aid=356980" target="_blank" rel="noopener" class="btn btn-booking" style="padding:16px 40px;font-size:.74rem">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <a href="https://www.booking.com/hotel/th/po-seven-zea-chic-hotel.th.html?aid=356980" target="_blank" rel="noopener" class="btn btn-bdc" style="padding:15px 36px;font-size:.73rem">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           Book via Booking.com
         </a>
       </div>
-      <p style="color:rgba(255,255,255,.5);font-size:.75rem;margin-top:2rem;letter-spacing:.06em">Best rates guaranteed &middot; Free cancellation available</p>
+      <div class="viewers-line">
+        <span class="vd"></span>
+        <span id="viewers-count">11 people</span>&nbsp;are looking at rooms right now
+      </div>
+      <p class="booking-note">Best rates guaranteed &middot; Free cancellation available &middot; No hidden fees</p>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section id="contact" class="section" style="background:var(--beige);padding:110px 0">
+<section id="contact" style="background:var(--beige);padding:108px 0">
   <div class="container">
     <div class="contact-grid">
       <div>
         <div class="reveal">
-          <p class="label">Contact Us</p>
-          <h2 class="sec-title">We're Here to Help</h2>
+          <span class="label">Get in Touch</span>
+          <h2 class="sec-title">We'll Reply Within a Few Hours</h2>
           <div class="divider"></div>
-          <p style="color:var(--text-m);line-height:1.85">Reach our team anytime — we're available 24 hours a day to assist with reservations, questions, and local recommendations.</p>
+          <p style="color:var(--text-m);line-height:1.82;font-size:.95rem">Have a question before booking? Just send us a message. Or call us directly — we're here 24 hours a day.</p>
         </div>
         <div class="contact-info">
-          <div class="contact-item reveal d1">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 5.8 5.8l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.6 16.92z"/></svg>
-            </div>
-            <div>
-              <p class="contact-label">Phone</p>
-              <p class="contact-val"><a href="tel:0890298899" style="color:var(--ocean)">089 029 8899</a></p>
-            </div>
+          <div class="ci reveal d1">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.39 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 5.8 5.8l.95-.95a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.6 16.92z"/></svg></div>
+            <div><p class="ci-lbl">Phone</p><p class="ci-val"><a href="tel:0890298899" style="color:var(--ocean)">089 029 8899</a></p></div>
           </div>
-          <div class="contact-item reveal d2">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <p class="contact-label">Email</p>
-              <p class="contact-val"><a href="mailto:sevenzeahotel@gmail.com" style="color:var(--ocean)">sevenzeahotel@gmail.com</a></p>
-            </div>
+          <div class="ci reveal d2">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+            <div><p class="ci-lbl">Email</p><p class="ci-val"><a href="mailto:sevenzeahotel@gmail.com" style="color:var(--ocean)">sevenzeahotel@gmail.com</a></p></div>
           </div>
-          <div class="contact-item reveal d3">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <p class="contact-label">Address</p>
-              <p class="contact-val">225/62 Moo 9, Pattaya North Road,<br>Bang Lamung, Chonburi 20150, Thailand</p>
-            </div>
+          <div class="ci reveal d3">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><p class="ci-lbl">Address</p><p class="ci-val">225/62 Moo 9, Pattaya North Road,<br>Bang Lamung, Chonburi 20150</p></div>
           </div>
-          <div class="contact-item reveal d4">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-            </div>
-            <div>
-              <p class="contact-label">Front Desk Hours</p>
-              <p class="contact-val">Open 24 Hours, 7 Days a Week</p>
-            </div>
+          <div class="ci reveal d4">
+            <div class="ci-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+            <div><p class="ci-lbl">Hours</p><p class="ci-val">Open 24 hours, 7 days a week</p></div>
           </div>
         </div>
       </div>
 
-      <div class="contact-form reveal-r">
-        <h3 class="form-title">Send Us a Message</h3>
-        <p style="font-size:.82rem;color:var(--text-m);margin-bottom:24px;line-height:1.65">Have a question? We'll reply within a few hours. Or book instantly below.</p>
-        <div class="form-group">
+      <div class="cf reveal-r">
+        <h3 class="cf-title">Quick Enquiry</h3>
+        <p class="cf-sub">We'll get back to you fast. Or skip the form and book directly below.</p>
+        <div class="fg">
           <label>Your Name</label>
-          <input type="text" placeholder="Full name">
+          <input type="text" placeholder="Your name">
         </div>
-        <div class="form-group">
-          <label>Email Address</label>
-          <input type="email" placeholder="you@example.com">
+        <div class="fg">
+          <label>Email</label>
+          <input type="email" placeholder="your@email.com">
         </div>
-        <div class="form-group">
+        <div class="fg">
           <label>Message</label>
-          <textarea placeholder="How can we help you?"></textarea>
+          <textarea placeholder="Ask us anything — room availability, early check-in, local tips..."></textarea>
         </div>
-        <button class="btn btn-ocean" style="width:100%;justify-content:center;padding:15px;margin-bottom:20px" onclick="handleFormSubmit(event)">Send Message</button>
-        <div style="text-align:center;padding-top:18px;border-top:1px solid var(--beige2)">
-          <p style="font-size:.72rem;color:var(--text-l);margin-bottom:12px;letter-spacing:.06em">Or book instantly via</p>
-          <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-            <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="btn btn-ocean" style="padding:10px 22px;font-size:.65rem">Book on Agoda</a>
-            <a href="https://www.booking.com/hotel/th/po-seven-zea-chic-hotel.th.html?aid=356980" target="_blank" rel="noopener" class="btn btn-outline" style="padding:10px 22px;font-size:.65rem">Book on Booking.com</a>
+        <button class="btn btn-ocean" style="width:100%;justify-content:center;padding:14px" onclick="handleForm(event)">Send Message</button>
+        <div class="cf-or">
+          <p>Or book instantly right now</p>
+          <div class="cf-or-btns">
+            <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="btn btn-ocean" style="padding:10px 20px;font-size:.65rem">Agoda</a>
+            <a href="https://www.booking.com/hotel/th/po-seven-zea-chic-hotel.th.html?aid=356980" target="_blank" rel="noopener" class="btn btn-outline" style="padding:10px 20px;font-size:.65rem">Booking.com</a>
+            <a href="https://www.facebook.com/sevenzeachichotelpattaya/?locale=th_TH" target="_blank" rel="noopener" class="btn btn-outline" style="padding:10px 20px;font-size:.65rem;border-color:var(--sand);color:var(--sand)">Facebook</a>
           </div>
         </div>
       </div>
@@ -1030,28 +954,28 @@ footer{background:var(--text);padding:60px 0 30px;color:rgba(250,248,244,.65)}
 <!-- FOOTER -->
 <footer>
   <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <p class="n1">Seven Zea</p>
-        <p class="n2">Chic Hotel Pattaya</p>
-        <p>A modern boutique hotel 150 meters from Pattaya Beach. Comfort, style, and the sea — all in one place.</p>
+    <div class="ft">
+      <div class="fb">
+        <p class="fn1">Seven Zea</p>
+        <p class="fn2">Chic Hotel Pattaya</p>
+        <p>Modern boutique hotel, 150m from Pattaya Beach. Beach walks, rooftop pool, free parking. Book direct and save.</p>
       </div>
-      <div class="footer-col">
+      <div class="fc2">
         <h4>Explore</h4>
         <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#rooms">Our Rooms</a></li>
+          <li><a href="#about">About the Hotel</a></li>
+          <li><a href="#rooms">Rooms &amp; Rates</a></li>
           <li><a href="#features">Hotel Features</a></li>
           <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#location">Location</a></li>
+          <li><a href="#location">Location &amp; Map</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
+      <div class="fc2">
+        <h4>Book &amp; Contact</h4>
         <ul>
           <li><a href="tel:0890298899">089 029 8899</a></li>
           <li><a href="mailto:sevenzeahotel@gmail.com">sevenzeahotel@gmail.com</a></li>
-          <li><a href="#location">North Pattaya, Chonburi</a></li>
+          <li><a href="https://www.facebook.com/sevenzeachichotelpattaya/?locale=th_TH" target="_blank" rel="noopener">Book Direct (Facebook)</a></li>
           <li><a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener">Book on Agoda</a></li>
           <li><a href="https://www.booking.com/hotel/th/po-seven-zea-chic-hotel.th.html?aid=356980" target="_blank" rel="noopener">Book on Booking.com</a></li>
         </ul>
@@ -1059,47 +983,21 @@ footer{background:var(--text);padding:60px 0 30px;color:rgba(250,248,244,.65)}
     </div>
     <div class="footer-bottom">
       <p>&copy; 2025 Seven Zea Chic Hotel Pattaya. All rights reserved.</p>
-      <p style="font-size:.68rem;opacity:.5">225/62 Moo 9, Pattaya North Road, Bang Lamung, Chonburi 20150</p>
+      <p style="opacity:.45">225/62 Moo 9, Pattaya North Road, Bang Lamung, Chonburi 20150</p>
     </div>
   </div>
 </footer>
 
 <script>
-// ── NAVBAR + BOOKING BAR SCROLL ──
+// ── NAVBAR + BOOKING BAR ──
 const nav = document.getElementById('nav');
 const bookingBar = document.getElementById('booking-bar');
-const heroHeight = document.getElementById('hero').offsetHeight;
 window.addEventListener('scroll', () => {
   const y = window.scrollY;
+  const heroH = document.getElementById('hero').offsetHeight;
   nav.classList.toggle('scrolled', y > 60);
-  bookingBar.classList.toggle('visible', y > heroHeight * 0.6);
+  bookingBar.classList.toggle('visible', y > heroH * 0.55);
 }, { passive: true });
-
-// Set default dates for sticky bar
-(function(){
-  const today = new Date();
-  const tomorrow = new Date(today);
-  tomorrow.setDate(today.getDate() + 1);
-  const fmt = d => d.toISOString().split('T')[0];
-  const ci = document.getElementById('bar-checkin');
-  const co = document.getElementById('bar-checkout');
-  if(ci) ci.value = fmt(today);
-  if(co) co.value = fmt(tomorrow);
-  if(ci) ci.min = fmt(today);
-  if(co) co.min = fmt(tomorrow);
-  if(ci) ci.addEventListener('change', () => {
-    const newMin = new Date(ci.value);
-    newMin.setDate(newMin.getDate()+1);
-    co.min = fmt(newMin);
-    if(co.value <= ci.value) co.value = fmt(newMin);
-  });
-})();
-
-// ── MOBILE MENU ──
-function toggleMenu() {
-  document.getElementById('mob-menu').classList.toggle('open');
-  document.body.style.overflow = document.getElementById('mob-menu').classList.contains('open') ? 'hidden' : '';
-}
 
 // ── HERO PARALLAX ──
 const heroBg = document.getElementById('heroBg');
@@ -1108,99 +1006,101 @@ window.addEventListener('scroll', () => {
   if (!ticking) {
     requestAnimationFrame(() => {
       const y = window.scrollY;
-      if (y < window.innerHeight) {
-        heroBg.style.transform = `translateY(${y * 0.35}px) scale(1)`;
+      if (y < window.innerHeight * 1.2) {
+        heroBg.style.transform = `translateY(${y * 0.32}px) scale(1)`;
       }
       ticking = false;
     });
     ticking = true;
   }
 }, { passive: true });
-
-// Hero loaded zoom
-window.addEventListener('load', () => {
-  heroBg.classList.add('loaded');
-});
+window.addEventListener('load', () => heroBg.classList.add('loaded'));
 
 // ── SCROLL REVEAL ──
-const revealEls = document.querySelectorAll('.reveal, .reveal-l, .reveal-r');
-const io = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('on');
-      io.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-revealEls.forEach(el => io.observe(el));
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+document.querySelectorAll('.reveal,.reveal-l,.reveal-r').forEach(el => io.observe(el));
 
-// ── FORM SUBMIT ──
-function handleFormSubmit(e) {
-  e.preventDefault();
-  const btn = e.target;
-  btn.textContent = 'Message Sent ✓';
-  btn.style.background = 'var(--ocean-d)';
-  btn.style.pointerEvents = 'none';
-  setTimeout(() => {
-    btn.textContent = 'Send Enquiry';
-    btn.style.background = '';
-    btn.style.pointerEvents = '';
-  }, 3000);
+// ── STICKY BAR DATE DEFAULTS ──
+(function() {
+  const today = new Date();
+  const tom = new Date(today); tom.setDate(today.getDate() + 1);
+  const fmt = d => d.toISOString().split('T')[0];
+  const ci = document.getElementById('bar-checkin');
+  const co = document.getElementById('bar-checkout');
+  if (!ci || !co) return;
+  ci.value = fmt(today); ci.min = fmt(today);
+  co.value = fmt(tom);   co.min = fmt(tom);
+  ci.addEventListener('change', () => {
+    const nxt = new Date(ci.value); nxt.setDate(nxt.getDate() + 1);
+    co.min = fmt(nxt);
+    if (co.value <= ci.value) co.value = fmt(nxt);
+  });
+})();
+
+// ── MOBILE MENU ──
+function toggleMenu() {
+  const m = document.getElementById('mob-menu');
+  m.classList.toggle('open');
+  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
 }
 
 // ── ACTIVITY TOAST ──
-const toastData = [
-  {name:'Nattapong', city:'Bangkok', room:'Deluxe Room', ago:'just now'},
-  {name:'Supansa', city:'Chiang Mai', room:'Sea View Room', ago:'3 minutes ago'},
-  {name:'James', city:'Singapore', room:'Deluxe Room', ago:'5 minutes ago'},
-  {name:'Miho', city:'Tokyo', room:'Superior Room', ago:'8 minutes ago'},
-  {name:'Arjun', city:'Mumbai', room:'Sea View Room', ago:'11 minutes ago'},
-  {name:'Kanya', city:'Khon Kaen', room:'Deluxe Room', ago:'just now'},
-  {name:'David', city:'Sydney', room:'Superior Room', ago:'4 minutes ago'},
+const toasts = [
+  {name:'Nattapong', city:'Bangkok',    room:'Deluxe Room',   ago:'just now'},
+  {name:'Sarah',     city:'Singapore',  room:'Sea View Room', ago:'3 min ago'},
+  {name:'James',     city:'Sydney',     room:'Deluxe Room',   ago:'5 min ago'},
+  {name:'Miho',      city:'Tokyo',      room:'Superior Room', ago:'8 min ago'},
+  {name:'Kanya',     city:'Khon Kaen', room:'Deluxe Room',   ago:'just now'},
+  {name:'Arjun',     city:'Mumbai',     room:'Sea View Room', ago:'12 min ago'},
+  {name:'Supansa',   city:'Chiang Mai', room:'Superior Room', ago:'2 min ago'},
 ];
-const toast = document.getElementById('activity-toast');
-const toastName = document.getElementById('toast-name');
-const toastTime = document.getElementById('toast-time');
-let toastIdx = 0;
+const toast = document.getElementById('act-toast');
+const atMsg  = document.getElementById('at-msg');
+const atTime = document.getElementById('at-time');
+let ti = Math.floor(Math.random() * toasts.length);
 function showToast() {
-  const d = toastData[toastIdx % toastData.length];
-  toastName.textContent = d.name + ' from ' + d.city;
-  toast.querySelector('.toast-text').innerHTML = '<strong>' + d.name + ' from ' + d.city + '</strong> just booked a ' + d.room;
-  toastTime.textContent = d.ago;
+  const d = toasts[ti % toasts.length]; ti++;
+  atMsg.innerHTML  = '<strong>' + d.name + ' from ' + d.city + '</strong> just booked a ' + d.room;
+  atTime.textContent = d.ago;
   toast.classList.add('show');
-  setTimeout(() => toast.classList.remove('show'), 4200);
-  toastIdx++;
+  setTimeout(() => toast.classList.remove('show'), 4500);
 }
-setTimeout(showToast, 4000);
-setInterval(showToast, 18000);
+setTimeout(showToast, 5000);
+setInterval(showToast, 20000);
 
-// ── LIVE VIEWERS COUNTER ──
-const viewersEl = document.getElementById('viewers-count');
-if(viewersEl) {
-  const base = 9 + Math.floor(Math.random() * 8);
-  viewersEl.textContent = base + ' people';
-  setInterval(() => {
-    const v = 8 + Math.floor(Math.random() * 10);
-    viewersEl.textContent = v + ' people';
-  }, 22000);
+// ── LIVE VIEWERS ──
+const vEl = document.getElementById('viewers-count');
+if (vEl) {
+  vEl.textContent = (9 + Math.floor(Math.random() * 9)) + ' people';
+  setInterval(() => { vEl.textContent = (8 + Math.floor(Math.random() * 10)) + ' people'; }, 25000);
 }
 
-// ── MICRO-INTERACTION: Room cards tilt ──
+// ── ROOM CARD TILT ──
 document.querySelectorAll('.room-card').forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    card.style.transform = `translateY(-10px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`;
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width  - 0.5;
+    const y = (e.clientY - r.top)  / r.height - 0.5;
+    card.style.transform = `translateY(-9px) rotateX(${-y*3.5}deg) rotateY(${x*3.5}deg)`;
   });
   card.addEventListener('mouseleave', () => {
     card.style.transform = '';
-    card.style.transition = 'all .6s cubic-bezier(.16,1,.3,1)';
+    card.style.transition = 'all .55s cubic-bezier(.16,1,.3,1)';
   });
-  card.addEventListener('mouseenter', () => {
-    card.style.transition = 'transform .12s ease, box-shadow .45s ease';
-  });
+  card.addEventListener('mouseenter', () => { card.style.transition = 'transform .1s ease'; });
 });
+
+// ── CONTACT FORM ──
+function handleForm(e) {
+  e.preventDefault();
+  const btn = e.target;
+  btn.textContent = 'Sent! We\'ll reply soon ✓';
+  btn.style.background = 'var(--ocean-d)';
+  btn.style.pointerEvents = 'none';
+  setTimeout(() => { btn.textContent = 'Send Message'; btn.style.background = ''; btn.style.pointerEvents = ''; }, 3500);
+}
 
 // ── SMOOTH ANCHOR SCROLL ──
 document.querySelectorAll('a[href^="#"]').forEach(a => {
@@ -1209,8 +1109,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const el = document.querySelector(id);
     if (el) {
       e.preventDefault();
-      const offset = id === '#hero' ? 0 : el.getBoundingClientRect().top + window.scrollY - 80;
-      window.scrollTo({ top: offset, behavior: 'smooth' });
+      window.scrollTo({ top: id === '#hero' ? 0 : el.getBoundingClientRect().top + window.scrollY - 78, behavior: 'smooth' });
     }
   });
 });
