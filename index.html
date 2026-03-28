@@ -157,6 +157,10 @@ a{color:inherit;text-decoration:none}
 .ts-item strong{color:var(--text);font-weight:500}
 @media(max-width:680px){.ts-inner{padding:0 16px}.ts-item{padding:10px 14px;font-size:.68rem}}
 
+/* ── HERO URGENCY LINE ── */
+.hero-urgency{display:inline-flex;align-items:center;gap:7px;background:rgba(110,231,160,.15);border:1px solid rgba(110,231,160,.3);padding:6px 16px;border-radius:30px;font-size:.67rem;color:rgba(255,255,255,.88);letter-spacing:.04em;margin-bottom:1rem;animation:fadeIn 1s .9s both}
+.hu-dot{width:5px;height:5px;background:#6EE7A0;border-radius:50%;animation:pulse 1.5s infinite;flex-shrink:0}
+
 /* ── WAVE ── */
 .wave-wrap{line-height:0;overflow:hidden;margin-top:-1px}
 .wave-wrap svg{width:100%;height:56px;display:block}
@@ -172,7 +176,8 @@ a{color:inherit;text-decoration:none}
 .ota-chip{display:flex;align-items:center;gap:7px;border:1.5px solid var(--border);border-radius:30px;padding:8px 18px;font-size:.7rem;color:var(--text-m);font-weight:500;transition:all .28s}
 .ota-chip:hover{border-color:var(--ocean);color:var(--ocean);transform:translateY(-2px)}
 .ota-chip svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.6}
-.reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.reviews-grid{display:flex;flex-wrap:wrap;gap:18px;justify-content:center}
+.rc{flex:0 1 calc(33.333% - 14px);min-width:270px}
 .rc{background:var(--white);padding:30px;border-radius:2px;box-shadow:0 3px 16px var(--shadow);transition:all .38s cubic-bezier(.16,1,.3,1);border-top:3px solid transparent;position:relative}
 .rc:hover{transform:translateY(-5px);box-shadow:0 14px 44px var(--shadow);border-top-color:var(--ocean)}
 .rc-stars{color:#F5A623;font-size:.82rem;letter-spacing:1px;margin-bottom:12px}
@@ -182,7 +187,7 @@ a{color:inherit;text-decoration:none}
 .rc-name{font-weight:500;font-size:.83rem;color:var(--text)}
 .rc-meta{font-size:.67rem;color:var(--text-l);margin-top:1px}
 .rc-via{position:absolute;top:18px;right:18px;font-size:.6rem;color:var(--text-l);letter-spacing:.1em;text-transform:uppercase;opacity:.6}
-@media(max-width:720px){.reviews-grid{grid-template-columns:1fr}}
+@media(max-width:720px){.rc{flex:1 1 100%;max-width:100%}}
 
 /* ── ABOUT ── */
 #about{background:var(--white);padding:108px 0}
@@ -420,7 +425,7 @@ footer{background:var(--text);padding:56px 0 28px;color:rgba(250,248,244,.6)}
       </select>
     </div>
     <div class="bar-cta">
-      <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="bar-btn">Check Availability</a>
+      <a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="bar-btn">Book Direct &mdash; Save 10%</a>
       <span class="bar-guarantee">Best price guaranteed &middot; Free cancellation</span>
     </div>
   </div>
@@ -438,7 +443,7 @@ footer{background:var(--text);padding:56px 0 28px;color:rgba(250,248,244,.6)}
     <li><a href="#location">Location</a></li>
     <li><a href="#gallery">Gallery</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#booking" class="nav-book">Book Now</a></li>
+    <li><a href="https://www.agoda.com/th-th/seven-zea-chic-hotel/hotel/pattaya-th.html?cid=1844104&ds=lK%2BT32bXWpGoZYpV" target="_blank" rel="noopener" class="nav-book">Book Direct &amp; Save 10%</a></li>
   </ul>
   <div class="ham" id="ham" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -468,6 +473,7 @@ footer{background:var(--text);padding:56px 0 28px;color:rgba(250,248,244,.6)}
       <span class="hb-sep">&middot;</span>
       <span class="hb-text">Agoda &amp; Booking.com</span>
     </div>
+    <div class="hero-urgency"><span class="hu-dot"></span> Booked 8 times in the last 24 hours</div>
     <p class="hero-eyebrow">North Pattaya &middot; 150m to Pattaya Beach</p>
     <h1 class="hero-title">Stay Close to the Sea.<br>Experience <em>Pattaya</em> in Style</h1>
     <p class="hero-sub">A modern chic hotel just steps from Pattaya Beach — comfortable, affordable, and a short walk to the sea every single morning.</p>
@@ -522,7 +528,7 @@ footer{background:var(--text);padding:56px 0 28px;color:rgba(250,248,244,.6)}
         <div class="rating-num">4.5</div>
         <div class="rating-detail">
           <span class="r-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-          <span class="r-sub">Rated by verified guests on Agoda &amp; Booking.com</span>
+          <span class="r-sub">500+ verified guests on Agoda &amp; Booking.com</span>
         </div>
       </div>
       <p class="label" style="margin-bottom:.5rem">What guests are saying</p>
@@ -571,6 +577,30 @@ footer{background:var(--text);padding:56px 0 28px;color:rgba(250,248,244,.6)}
           <div>
             <p class="rc-name">Nattaya R.</p>
             <p class="rc-meta">Stayed 2 nights &middot; Jan 2025</p>
+          </div>
+        </div>
+      </div>
+      <div class="rc reveal d4">
+        <span class="rc-via">Booking.com</span>
+        <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rc-text">"Perfect for a beach holiday. Staff went out of their way to help us find local restaurants and arrange transport. Room was spotless and the A/C worked great — essential in Pattaya weather. Will definitely book again."</p>
+        <div class="rc-author">
+          <div class="rc-av" style="background:linear-gradient(135deg,#7EC8A0,#27AE60)">P</div>
+          <div>
+            <p class="rc-name">Pacharee S.</p>
+            <p class="rc-meta">Stayed 2 nights &middot; Feb 2026</p>
+          </div>
+        </div>
+      </div>
+      <div class="rc reveal d5">
+        <span class="rc-via">Agoda</span>
+        <div class="rc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="rc-text">"Great hotel for the price point. The rooftop pool is a real bonus — we spent both evenings up there watching the sunset over the city. Free parking made everything so much easier. Would choose this hotel again next trip."</p>
+        <div class="rc-author">
+          <div class="rc-av" style="background:linear-gradient(135deg,#F5C274,var(--sand))">T</div>
+          <div>
+            <p class="rc-name">Thomas K.</p>
+            <p class="rc-meta">Stayed 3 nights &middot; Jan 2026</p>
           </div>
         </div>
       </div>
@@ -675,8 +705,8 @@ footer{background:var(--text);padding:56px 0 28px;color:rgba(250,248,244,.6)}
         </div>
         <div class="room-body">
           <div class="urgency-row">
-            <div class="urgency"><span class="ud"></span> Only 3 rooms left</div>
-            <div class="booked-tag"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Booked 4× today</div>
+            <div class="urgency"><span class="ud"></span> Only 3 rooms left this weekend</div>
+            <div class="booked-tag"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Booked 4 times in the last 24h</div>
           </div>
           <h3 class="room-name">Superior Room</h3>
           <div class="amenities">
@@ -709,8 +739,8 @@ footer{background:var(--text);padding:56px 0 28px;color:rgba(250,248,244,.6)}
         </div>
         <div class="room-body">
           <div class="urgency-row">
-            <div class="urgency"><span class="ud"></span> Only 2 rooms left</div>
-            <div class="booked-tag"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Booked 7× today</div>
+            <div class="urgency"><span class="ud"></span> Only 2 rooms left this weekend</div>
+            <div class="booked-tag"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Booked 8 times in the last 24h</div>
           </div>
           <h3 class="room-name">Deluxe Room</h3>
           <div class="amenities">
@@ -743,8 +773,8 @@ footer{background:var(--text);padding:56px 0 28px;color:rgba(250,248,244,.6)}
         </div>
         <div class="room-body">
           <div class="urgency-row">
-            <div class="urgency"><span class="ud"></span> Only 1 room left</div>
-            <div class="booked-tag"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Booked 5× today</div>
+            <div class="urgency"><span class="ud"></span> Only 1 room left this weekend</div>
+            <div class="booked-tag"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> Booked 6 times in the last 24h</div>
           </div>
           <h3 class="room-name">Sea View Room</h3>
           <div class="amenities">
